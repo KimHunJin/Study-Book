@@ -33,6 +33,25 @@ var station_number = [
 110000116
 ];
 
+function get() {
+	// TODO : callback...
+	
+}
+
+async function insertDate(query) {
+	connection.query(query, function(err, result) {
+		if(err) {
+			console.error(err);
+			return false;
+		} else {
+			console.log('success');
+			return 1;
+		}
+	});
+}
+
+
+
 var infos = [];
 
 var mDate = moment().format('YYYY-MM-DD HH:mm:ss');
@@ -63,21 +82,9 @@ async function getInfo(_station_number, _date, _url) {
 	return true;
 }
 
-async function insertDate(query) {
-	connection.query(query, function(err, result) {
-		if(err) {
-			console.error(err);
-			return false;
-		} else {
-			console.log('success');
-			return 1;
-		}
-	});
-}
 
-function get() {
-	
-}
+
+
 
 
 
