@@ -1,0 +1,8 @@
+# node module
+node_modules/
+
+# db info
+db.js
+
+# sftp
+sftp-config.json
