@@ -15,7 +15,7 @@
       <file leaf-file-name="TernaryOperator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TernaryOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
+            <state relative-caret-position="221">
               <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
               <folding>
                 <element signature="e#1485#1486#0" expanded="true" />
@@ -23,15 +23,6 @@
                 <element signature="e#2011#2012#0" expanded="true" />
                 <element signature="e#2067#2068#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HuffmanTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HuffmanTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -211,7 +202,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TernaryOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="221">
           <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
           <folding>
             <element signature="e#1485#1486#0" expanded="true" />

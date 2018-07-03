@@ -17,6 +17,7 @@
     "truffle-hdwallet-provider": "0.0.5",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
     "web3": "^1.0.0-beta.34"
   },
   "devDependencies": {
@@ -39,7 +40,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "cross-spawn": "^5.0.1",
     "css-loader": "^0.28.0",
-    "eslint": "^4.15.0",
+    "eslint": "^4.19.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
@@ -47,7 +48,7 @@
     "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^4.0.0",
+    "eslint-plugin-vue": "^4.5.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
