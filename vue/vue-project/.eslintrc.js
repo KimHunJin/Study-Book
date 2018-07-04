@@ -1,5 +1,5 @@
 // https://eslint.org/docs/user-guide/configuring
-
+// eslint-disable
 module.exports = {
   root: true,
   parserOptions: {
@@ -11,7 +11,7 @@ module.exports = {
   extends: [
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
     // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential', 
+    'plugin:vue/base', 
     // https://github.com/standard/standard/blob/master/docs/RULES-en.md
     'standard'
   ],
@@ -24,15 +24,7 @@ module.exports = {
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
 
-    'indent': [2, 'tab'],
-    'no-tabs': 0,
-
-    'space-after-keywords': 'off',
-    'keyword-spacing': [2, {'before': true, 'after': true}],
-
-    'quotes': ['off', 'single'],
-    
   }
 }

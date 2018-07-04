@@ -1,3 +1,4 @@
+ <!-- eslint-disable -->
 <template>
 	<div class='metamask-info'>
    <p v-if="isInjected" id="has-metamask"><i aria-hidden="true" class="fa fa-check"></i> Metamask installed</p>

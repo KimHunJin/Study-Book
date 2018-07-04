@@ -1,3 +1,4 @@
+// eslint-disable
 import Web3 from 'web3'
 import {address, ABI} from './constants/casinoContract'
 

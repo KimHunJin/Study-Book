@@ -1,3 +1,4 @@
+// eslint-disable
 let state = {
 	web3: {
 		isInjected: false,
