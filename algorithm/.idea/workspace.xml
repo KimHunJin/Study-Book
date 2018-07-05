@@ -12,12 +12,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TernaryOperator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TernaryOperator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TernaryOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+            <state relative-caret-position="340">
+              <caret line="39" column="28" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="28" />
               <folding>
+                <element signature="e#1485#1486#0" expanded="true" />
                 <element signature="e#1521#1522#0" expanded="true" />
                 <element signature="e#2011#2012#0" expanded="true" />
                 <element signature="e#2067#2068#0" expanded="true" />
@@ -26,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RunLength.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RunLength.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RunLength.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="22" selection-start-column="22" selection-end-column="22" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -48,6 +49,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/TernaryOperator.java" />
+        <option value="$PROJECT_DIR$/src/RunLength.java" />
       </list>
     </option>
   </component>
@@ -209,22 +211,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/RunLength.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TernaryOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+        <state relative-caret-position="340">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="28" />
           <folding>
+            <element signature="e#1485#1486#0" expanded="true" />
             <element signature="e#1521#1522#0" expanded="true" />
             <element signature="e#2011#2012#0" expanded="true" />
             <element signature="e#2067#2068#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RunLength.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
