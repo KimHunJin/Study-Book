@@ -37,20 +37,29 @@ export default {
   methods: {
     clickNumber (event) {
       console.log('BETTING ON NUMBER, AMOUNT', event.target.innerHTML, this.amount)
+
       this.winEvent = null
       this.pending = true
-      this.$store.state.contractInstance().bet(event.target.innerHTML, {
-        gas: 300000,
-        value: this.$store.state.web3.web3Instance().toWei(this.amount, 'ether'),
-        from: this.$store.state.web3.coinbase
-      }, (err, result) => {
-        if (err) {
-          console.log(err)
+      console.log('casino - ss',this.$store.state.web3.web3Instance())
+      console.log('casino - ether', this.amount)
+      console.log('casino - instance coinbase', this.$store.state.web3.coinbase)
+      console.log('casino - instance wei', this.$store.state.web3.web3Instance().utils.toWei(this.amount, 'ether'))
+      console.log('casino - contract', this.$store.state.contractInstance())
+
+      this.$store.state.contractInstance().methods.bet(parseInt(event.target.innerHTML,10)).call({
+        from: this.$store.state.web3.coinbase,
+        gas: 3000000,
+        value: this.$store.state.web3.web3Instance().utils.toWei(this.amount, 'ether')
+      })
+      .then((result) => {
+        console.log(result)
+        if(result) {
+          console.log('err',result)
           this.pending = false
         } else {
           let Won = this.$store.state.contractInstance().Won()
           Won.watch((err, result) => {
-            if (err) {
+            if(err) {
               console.log('could not get event Won()')
             } else {
               this.winEvent = result.args

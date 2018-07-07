@@ -1,4 +1,3 @@
- <!-- eslint-disable -->
 <template>
 	<div class='metamask-info'>
    <p v-if="isInjected" id="has-metamask"><i aria-hidden="true" class="fa fa-check"></i> Metamask installed</p>
@@ -20,7 +19,7 @@
       coinbase: state => state.web3.coinbase,
       balance: state => state.web3.balance,
       ethBalance: state => {
-        if (state.web3.web3Instance !== null) return state.web3.web3Instance().fromWei(state.web3.balance, 'ether')
+        if (state.web3.web3Instance !== null) return state.web3.web3Instance().utils.fromWei(state.web3.balance.toString(), 'ether')
       }
   })
   }

@@ -1,5 +1,5 @@
 // eslint-disable
-const address = '0x8cdaf0cd259887258bc13a92c0a6da92698644c0'
+const address = '0x692a70d2e424a56d2c6c27aa97d1a86395877b3a'
 const ABI = [
 	{
 		"constant": false,
@@ -16,29 +16,13 @@ const ABI = [
 		"type": "function"
 	},
 	{
-		"constant": true,
+		"constant": false,
 		"inputs": [],
-		"name": "houseEdge",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
+		"name": "kill",
+		"outputs": [],
 		"payable": false,
-		"stateMutability": "view",
+		"stateMutability": "nonpayable",
 		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"name": "_houseEdge",
-				"type": "uint256"
-			}
-		],
-		"payable": true,
-		"stateMutability": "payable",
-		"type": "constructor"
 	},
 	{
 		"anonymous": false,
@@ -56,7 +40,40 @@ const ABI = [
 		],
 		"name": "Won",
 		"type": "event"
+	},
+	{
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "fallback"
+	},
+	{
+		"inputs": [
+			{
+				"name": "_minBet",
+				"type": "uint256"
+			},
+			{
+				"name": "_houseEdge",
+				"type": "uint256"
+			}
+		],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "constructor"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "checkContractBalance",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
 	}
 ]
-
 export {address, ABI}
