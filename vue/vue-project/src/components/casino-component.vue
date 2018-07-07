@@ -46,7 +46,7 @@ export default {
       console.log('casino - instance wei', this.$store.state.web3.web3Instance().utils.toWei(this.amount, 'ether'))
       console.log('casino - contract', this.$store.state.contractInstance())
 
-      this.$store.state.contractInstance().methods.bet(parseInt(event.target.innerHTML,10)).call({
+      this.$store.state.contractInstance().methods.bet(parseInt(event.target.innerHTML,10)).send({
         from: this.$store.state.web3.coinbase,
         gas: 3000000,
         value: this.$store.state.web3.web3Instance().utils.toWei(this.amount, 'ether')
