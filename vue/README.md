@@ -3,8 +3,7 @@
 ### Casino dApp (blockchain)
 (Casino dApp)[https://github.com/KimHunJin/Study-Book/tree/master/vue/vue-project]
 
-1. Needs
-> Metamask, Web3.js (1.0), Vue.js
+1. Needs Metamask, Web3.js (1.0), Vue.js
 
 2. clone this project
 
