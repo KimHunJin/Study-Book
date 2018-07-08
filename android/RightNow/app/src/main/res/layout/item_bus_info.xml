@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/img_item_bus_info_current_bus"
+        app:srcCompat="@drawable/ic_directions_bus_red_24dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp" />
+
+    <include
+        android:id="@+id/layout_item_bus_info_line_header"
+        layout="@layout/layout_item_bus_info_line_header"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_item_bus_info_line_footer"
+        layout="@layout/layout_item_bus_info_line_footer"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_item_bus_info_body"
+        layout="@layout/layout_item_bus_info_line_body"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_item_bus_info_bus_stop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="불암 현대 아파트" />
+
+        <TextView
+            android:id="@+id/txt_item_bus_info_bus_stop_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="11-226"
+            android:textColor="@color/colorGray"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_item_bus_info_book_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="24dp"
+            app:srcCompat="@drawable/ic_star_blue_24dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

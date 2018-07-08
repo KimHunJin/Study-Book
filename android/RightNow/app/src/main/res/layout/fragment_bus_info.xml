@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/layout_bus_info_map"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorGray">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="MAP"
+                android:textColor="@color/colorWhite" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_bus_info_bus_info"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/layout_bus_info_map"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="8dp">
+
+            <ImageView
+                android:id="@+id/img_bus_info_bus"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:srcCompat="@drawable/ic_directions_bus_blue_24dp" />
+
+            <TextView
+                android:id="@+id/txt_bus_info_bus_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/img_bus_info_bus"
+                android:text="1139"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txt_bus_info_bus_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_bus_info_bus"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="04:30 ~ 23:40"
+                android:textColor="@color/colorGray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txt_bus_info_bus_stop_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_bus_info_bus_time"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:text="11-226"
+                android:textColor="@color/colorGray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txt_bus_info_bus_dump"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_bus_info_bus_stop_id"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="평균 배차 간격"
+                android:textColor="@color/colorGray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txt_bus_info_dispense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_bus_info_bus_dump"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:text="평일 : 10분 / 토요일 15분 / 공휴일 20분"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_bus_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_bus_info_bus_info">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
