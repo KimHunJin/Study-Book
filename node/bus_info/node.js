@@ -33,10 +33,16 @@ var station_number = [
 110000116
 ];
 
-function get() {
+
+
+setInterval(function() {
+
 	// TODO : callback...
-	
-}
+	var mDate = moment().format('YYYY-MM-DD HH:mm:ss');
+	for(var i=0; i<9;i++) {
+		getInfo(station_number[i], mDate, array[i]);
+	}
+},420000);
 
 async function insertDate(query) {
 	connection.query(query, function(err, result) {
@@ -54,7 +60,7 @@ async function insertDate(query) {
 
 var infos = [];
 
-var mDate = moment().format('YYYY-MM-DD HH:mm:ss');
+
 
 async function getInfo(_station_number, _date, _url) {
 	var station = _station_number;
@@ -71,7 +77,7 @@ async function getInfo(_station_number, _date, _url) {
 			times.push($(this).text());
 		});
 
-		var query = "insert into info values(" + station + ", 'bus', '" + times[0] + "', '" +
+		var query = "insert into info values(" + station + ", '1139', '" + times[0] + "', '" +
 		times[1] + "', '" + _date + "')";
 
 
