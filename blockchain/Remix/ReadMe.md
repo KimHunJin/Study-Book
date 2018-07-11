@@ -60,13 +60,18 @@ cd node_modules/solc
 wget https://ethereum.github.io/solc-bin/soljson.js
 ```
 
-7. change directory remix-ide home
+7. install browserify
 ```
-cd ../..
-npm run build // but.. error
+npm install -g browserify
 ```
 
-8. start
+8. change directory remix-ide home
+```
+cd ../..
+npm run build
+```
+
+9. start
 ```
 npm start
 ```
@@ -74,3 +79,8 @@ npm start
 we can load remix-ide page.
 
 but, has some error.
+
+message
+```
+Uncaught TypeError: StaticAnalysisRunner is not a constructor
+```
