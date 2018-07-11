@@ -42,32 +42,26 @@ apt-get install npm
 
 git clone "git clone https://github.com/ethereum/remix-ide.git"
 
-then ... error
-
+cd remix-ide
 ```
 
-5. change package.json
-```
-"setupremix": "npm run pullremix && npm run linkremixcore && npm run linkremixlib && npm run linkremixsolidity;"
---> // current remix repository has not remix-core
-"setupremix": "npm run pullremix && npm run linkremixlib && npm run linkremixsolidity;"
-```
-
-6. insert soljson.js
-```
-cd node_modules/solc
-
-wget https://ethereum.github.io/solc-bin/soljson.js
-```
-
-7. install browserify
+5. install browserify
 ```
 npm install -g browserify
 ```
 
-8. change directory remix-ide home
+6. install babelify
 ```
-cd ../..
+npm install --save-dev babelify
+```
+
+7. install module
+```
+npm install
+```
+
+8. npm run build
+```
 npm run build
 ```
 
@@ -77,10 +71,3 @@ npm start
 ```
 
 we can load remix-ide page.
-
-but, has some error.
-
-message
-```
-Uncaught TypeError: StaticAnalysisRunner is not a constructor
-```
