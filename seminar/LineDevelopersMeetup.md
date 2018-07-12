@@ -1,4 +1,4 @@
-## Line Developers Meetup
+## Line Developers Meetup (2018.07.10 화)
 > 오랫만에 세미나에 와서 열심히 들었으나,,, 내겐 너무 높은 레벨이라 아무것도 모르겠다 ㅎㅎㅎ
 이해한 만큼만 작성,,,
 

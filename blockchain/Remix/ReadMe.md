@@ -42,6 +42,32 @@ apt-get install npm
 
 git clone "git clone https://github.com/ethereum/remix-ide.git"
 
-then ... error
-
+cd remix-ide
 ```
+
+5. install browserify
+```
+npm install -g browserify
+```
+
+6. install babelify
+```
+npm install --save-dev babelify
+```
+
+7. install module
+```
+npm install
+```
+
+8. npm run build
+```
+npm run build
+```
+
+9. start
+```
+npm start
+```
+
+we can load remix-ide page.
