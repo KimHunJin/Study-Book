@@ -3,10 +3,10 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 public class BJ_2667 {
     private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -25,6 +25,7 @@ public class BJ_2667 {
     private void solve() {
         input();
         int count = 0;
+
 
         List<Integer> l = new ArrayList<>();
         for(int i=0;i<n;i++) {
