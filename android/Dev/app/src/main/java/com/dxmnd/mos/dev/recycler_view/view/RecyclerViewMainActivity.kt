@@ -27,14 +27,14 @@ class RecyclerViewMainActivity : AppCompatActivity(), Contract.View {
             this.adapterModel = adapter
         }
 
-
         recycler_view.setHasFixedSize(true)
         recycler_view.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recycler_view.adapter = adapter
 
         fab_recycler_view.setOnClickListener {
             adapter?.apply {
-                presenter.addItemClick(this)
+                presenter.addItemClick()
+                this.notifyDataSetChanged()
             }
         }
     }
