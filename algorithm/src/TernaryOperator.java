@@ -36,6 +36,12 @@ import java.util.Scanner;
  * output
  * 7
  * 23
+ *
+ * solution
+ * tree
+ *
+ * but..
+ * has exception
  */
 public class TernaryOperator {
     private static final String BIG = ">";

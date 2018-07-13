@@ -1,47 +1,39 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Collections;
-import java.util.PriorityQueue;
-import java.util.StringTokenizer;
-
+/**
+ * algorithm run-length
+ *
+ * 문자열 압축 알고리즘.
+ *
+ * input
+ * qwwwwwwweeeeerrtyyyyyqqqqwEErTTT
+ *
+ * output
+ * 1q7w5e2r1t5y4q1w2E1r3T
+ */
 public class RunLength {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int count = Integer.parseInt(br.readLine());
-        PriorityQueue<Integer> tree = new PriorityQueue<>(count, Collections.reverseOrder());
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+    public static void main(String[] args) {
+        new RunLength().solve();
+    }
 
-        int i;
+    private void solve() {
+        String input = "qwwwwwwweeeeerrtyyyyyqqqqwEErTTT";
+        System.out.println(algorithmRunLength(input));
+    }
 
-        for (i = 0; i < count; i++) {
-            tree.add(Integer.parseInt(st.nextToken()));
+    private String algorithmRunLength(String input) {
+        StringBuilder sb = new StringBuilder();
+        int size = input.length();
+
+        for(int i = 0 ;i<size; i++) {
+            int runLength = 1;
+            char c = input.charAt(i);
+            while (i + 1 < size && c == input.charAt(i + 1)) {
+                runLength++;
+                i++;
+            }
+            sb.append(runLength);
+            sb.append(c);
         }
 
-        int size = tree.size();
-//        for(i=0;i<size;i++) {
-//            System.out.println(tree.poll());
-//        }
-
-        int max = 0;
-        System.out.println("max" + max);
-        i = 1;
-
-        System.out.println("for each");
-        for (Integer tmp : tree) {
-            System.out.println("tmp" + tmp);
-            max = (max < tmp) ? tmp : max;
-        }
-
-        System.out.println();
-        System.out.println("poll");
-        for(i=0;i<size;i++) {
-            System.out.println(tree.poll());
-        }
-
-        System.out.println();
-        System.out.println();
-        System.out.println(max);
-
+        return sb.toString();
     }
 }
