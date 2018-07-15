@@ -50,11 +50,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
               <caret line="24" selection-start-line="24" selection-end-line="24" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BJ_1915.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/baekjoon/BJ_1915.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" lean-forward="true" selection-end-line="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,11 +105,12 @@
         <option value="$PROJECT_DIR$/src/baekjoon/BJ_1015.java" />
         <option value="$PROJECT_DIR$/src/RunLength.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/baekjoon/BJ_1915.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+    <option name="y" value="53" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
@@ -117,6 +130,12 @@
               <item name="algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="baekjoon" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -145,9 +164,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RunLength">
+  <component name="RunManager" selected="Application.BJ_1915">
     <configuration name="BJ_1015" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="baekjoon.BJ_1015" />
+      <module name="algorithm" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="baekjoon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="BJ_1915" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="baekjoon.BJ_1915" />
       <module name="algorithm" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -224,9 +254,11 @@
       <item itemvalue="Application.RunLength" />
       <item itemvalue="Application.BJ_2667" />
       <item itemvalue="Application.BJ_1015" />
+      <item itemvalue="Application.BJ_1915" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BJ_1915" />
         <item itemvalue="Application.RunLength" />
         <item itemvalue="Application.BJ_1015" />
         <item itemvalue="Application.BJ_2667" />
@@ -259,12 +291,12 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32948583" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32948583" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -401,6 +433,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" selection-start-line="24" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baekjoon/BJ_1915.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

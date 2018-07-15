@@ -110,6 +110,27 @@ public class Lambda {
         list.forEach(System.out::println); // method reference
     }
 
+
+    interface Function<T, R> {
+        R apply(T t); // abstract method
+    }
+
+    <T, R>List<R> map(List<T> list, Function<T, R> f) {
+        List<R> result = new ArrayList<>();
+        for(T s : list) {
+            result.add(f.apply(s));
+        }
+        return result;
+    }
+
+    private void list() {
+        List<Integer> l = map(Arrays.asList("labms", "in", "action"),
+                (String::length));
+
+        l.forEach(System.out::println);
+    }
+
     public static void main(String[] args) {
+        new Lambda().list();
     }
 }
