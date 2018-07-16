@@ -4,6 +4,33 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 백준 온라인 저지 1915
+ *
+ * n×m의 0, 1로 된 배열이 있다. 이 배열에서 1로 된 가장 큰 정사각형의 크기를 구하는 프로그램을 작성하시오.
+ *
+ * 0	1	0	0
+ * 0	1	1	1
+ * 1	1	1	0
+ * 0	0	1	0
+ *
+ * 위와 같은 예제에서는 가운데의 2×2 배열이 가장 큰 정사각형이다.
+ *
+ * ex)
+ * input
+ * 4 4
+ * 0100
+ * 0111
+ * 1110
+ * 0010
+ *
+ * output
+ * 4
+ *
+ * solution
+ * DP (Dynamic Programming)
+ *
+ */
 public class BJ_1915 {
     public static void main(String[] args) {
 
