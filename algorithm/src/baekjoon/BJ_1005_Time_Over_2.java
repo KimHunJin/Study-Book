@@ -6,14 +6,14 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BJ_1005 {
+public class BJ_1005_Time_Over_2 {
     public static void main(String[] args) {
-        new BJ_1005().solution();
+        new BJ_1005_Time_Over_2().solution();
     }
 
     private class Build {
         int weight;
-//        List<Integer> available = new ArrayList<>();
+        List<Integer> available = new ArrayList<>();
         List<Integer> need = new ArrayList<>();
 
         Build(int weight) {
@@ -32,25 +32,34 @@ public class BJ_1005 {
         }
     }
 
+    private int[] value;
     private List<Build> list;
 
     private void unitSolution(BufferedReader br) {
         list = makeList(br);
         int destination = iRead(br);
+        int start = 0;
+        int size = list.size();
+        for (int i = 1; i < size; i++) {
+            if (list.get(i).need.size() == 0) {
+                start = i;
+            }
+        }
+        value = new int[size];
+        value[0] = 0; // 1부터 시작을 위한 dummy
 
-        int result = calTime(destination);
-        System.out.println(result);
+        value[start] = list.get(start).weight;
+        for (int i = 0; i < list.get(start).available.size(); i++) {
+            dp(start, list.get(start).available.get(i));
+        }
+        System.out.println(value[destination]);
     }
 
-    private int calTime(int start) {
-        if (list.get(start).need.size() == 0) {
-            return list.get(start).weight;
-        } else {
-            int max = 0;
-            for (int i = 0; i < list.get(start).need.size(); i++) {
-                max = Integer.max(max, list.get(start).weight + calTime(list.get(start).need.get(i)));
-            }
-            return max;
+    private void dp(int start, int destination) {
+        value[destination] = Math.max(value[destination], value[start] + list.get(destination).weight);
+        for (int i = 0; i < list.get(destination).available.size(); i++) {
+            int after = list.get(destination).available.get(i);
+            dp(destination, after);
         }
     }
 
@@ -74,11 +83,12 @@ public class BJ_1005 {
             int priority = convertInt(info[0]);
             int later = convertInt(info[1]);
 
-//            buildingInfo.get(priority).available.add(later);
+            buildingInfo.get(priority).available.add(later);
             buildingInfo.get(later).need.add(priority);
         }
         return buildingInfo;
     }
+
 
     private int convertInt(String s) {
         return Integer.parseInt(s);
