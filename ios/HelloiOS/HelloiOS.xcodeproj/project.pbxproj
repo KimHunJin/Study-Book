@@ -48,6 +48,7 @@
 		8566035520FF2A2D0086F4FB /* HelloiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloiOSUITests.swift; sourceTree = "<group>"; };
 		8566035720FF2A2D0086F4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8566036320FF2AC10086F4FB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8566036420FF312F0086F4FB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 		8566032920FF2A2B0086F4FB = {
 			isa = PBXGroup;
 			children = (
+				8566036420FF312F0086F4FB /* README.md */,
 				8566036320FF2AC10086F4FB /* .gitignore */,
 				8566033420FF2A2B0086F4FB /* HelloiOS */,
 				8566034920FF2A2D0086F4FB /* HelloiOSTests */,
