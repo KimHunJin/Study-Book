@@ -13,7 +13,7 @@ public class BJ_1005 {
 
     private class Build {
         int weight;
-//        List<Integer> available = new ArrayList<>();
+        //        List<Integer> available = new ArrayList<>();
         List<Integer> need = new ArrayList<>();
 
         Build(int weight) {
