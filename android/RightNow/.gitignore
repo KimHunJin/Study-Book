@@ -8,3 +8,8 @@
 /build
 /captures
 .externalNativeBuild
+
+Key.kt
+
+/.idea/caches/
+

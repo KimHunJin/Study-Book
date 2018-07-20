@@ -9,7 +9,7 @@ buildscript {
         propVersionName = '1.0.0'
 
         versions = ['kotlin'        : '1.2.30',
-                    'supportLibrary': '27.1.0',
+                    'supportLibrary': '27.1.1',
                     'anko'          : '0.10.1',
                     'firebase'      : '11.4.2',
                     'logger'        : '2.2.0',
@@ -38,6 +38,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
 }
 

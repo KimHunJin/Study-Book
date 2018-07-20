@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <FrameLayout
+        <com.nhn.android.maps.NMapView
             android:id="@+id/layout_bus_info_map"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -22,7 +22,7 @@
                 android:text="MAP"
                 android:textColor="@color/colorWhite" />
 
-        </FrameLayout>
+        </com.nhn.android.maps.NMapView>
 
         <RelativeLayout
             android:id="@+id/layout_bus_info_bus_info"
