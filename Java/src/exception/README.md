@@ -60,6 +60,8 @@ try {
 
 소스가 길어짐. 그래서 jdk7부터 try - with - resources가 나옴.
 
+## try-with-resources
+
 ```
 try(BufferedReader br = new BufferedReader(new InputSystemReader(System.in))) {
 
