@@ -16,7 +16,7 @@ public class BJ_1392 {
            String[] tmp = input(br).split(" ");
            int N = iRead(tmp[0]);
            int Q = iRead(tmp[1]);
-           
+
            List<Integer> list = new ArrayList<>();
            for(int i=1;i<=N;i++) {
                int time = iRead(input(br));
