@@ -152,13 +152,13 @@ public class BehaviorParameterization {
     private void getAnyList() {
         List<Integer> numbers = new ArrayList<>();
         List<Integer> evenNumbers = filter(numbers, (Integer i) -> i % 2 == 0);
-        
+
         List<Apple> inventory = new ArrayList<>();
         List<Apple> greenApples = filter(inventory, (Apple apple) -> "green".equals(apple.getColor()));
     }
 
     public static void main(String[] args) {
-        new BehaviorParameterization().getAppleList();
+
     }
 
 }
