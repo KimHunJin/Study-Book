@@ -70,7 +70,7 @@ List<Apple> greenApple = filterApples(inventory, new AppleGreenColorPredicate())
 ```
 
 ### 동작 파라미터 요약 이미지
-![Predicate 요약 이미지](https://github.com/KimHunJin/Study-Book/tree/master/Java/images/predicate.png)
+![Predicate 요약 이미지](https://github.com/KimHunJin/Study-Book/blob/master/Java/images/predicate.png)
 
 ### 간소화 시키기
 ex) 익명 클래스를 사용하여 간소화 시키기
