@@ -31,7 +31,7 @@ Comparator의 compare 메서드의 파라미터(두 개의 사과)
 * 람다의 바디 : a1.getWeight().compareTo(a2.getWeight())<br/>
 두 사과의 무게를 비교한다. 람다의 반환값에 해당하는 표현식이다.
 
-### Java8 유요한 다섯 가지 람다 표현식
+### Java8 유효한 다섯 가지 람다 표현식
 ```
 (String s) -> s.length() 
 ```
@@ -82,7 +82,7 @@ public interface Predicate<T> {
     boolean test (T t);
 }
 ```
-이 외에도 Comparatorm Runnable 등이 있음.
+이 외에도 Comparator, Runnable 등이 있음.
 
 ### 함수 디스크립터
 > 람다 표현식의 시그너처를 서술하는 메서드 <br/>
@@ -364,7 +364,7 @@ inventory.sort(new Comparator<Apple>() {
 inventory.sort((Apple a1, Apple a2)
     -> a1.getWeight().compareTo(a2.getWeight());
     
-// 형식 투론
+// 형식 론
 invertory.sort((a1, a2) -> a1.getWeight().compareTo(a2.getWeight()));
 
 // comparing 메서드 사용
