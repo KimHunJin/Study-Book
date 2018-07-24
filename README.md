@@ -1,7 +1,7 @@
 # Study-Book
 ## My Study Book
 
-1. [Java](https://github.com/KimHunJin/Study-Book/tree/master/Java) : Java 기본 개념 소개
+1. [Java](https://github.com/KimHunJin/Study-Book/tree/master/Java/src) : Java 기본 개념 소개
 2. [Algorithm](https://github.com/KimHunJin/Study-Book/tree/master/algorithm) : 알고리즘 문제 풀이
 3. [Android](https://github.com/KimHunJin/Study-Book/tree/master/android) : 진행중인 안드로이드 개인 프로젝트
 4. [Blockchain](https://github.com/KimHunJin/Study-Book/tree/master/blockchain) : 블록체인 공부
