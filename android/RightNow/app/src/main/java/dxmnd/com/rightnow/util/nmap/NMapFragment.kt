@@ -1,4 +1,4 @@
-package dxmnd.com.rightnow.main.info.view
+package dxmnd.com.rightnow.util.nmap
 
 import android.app.Fragment
 import android.os.Bundle

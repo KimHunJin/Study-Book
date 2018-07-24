@@ -1,4 +1,4 @@
-package java8.behavior_parameterization;
+package java8.chapter3_behavior_parameterization;
 
 import java.util.ArrayList;
 import java.util.Arrays;

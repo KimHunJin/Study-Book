@@ -57,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BehaviorParameterization.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/java8/behavior_parameterization/BehaviorParameterization.java">
+      <file leaf-file-name="BehaviorParameterization.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java8/chapter3_behavior_parameterization/BehaviorParameterization.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2415">
-              <caret line="161" selection-start-line="161" selection-end-line="161" />
+            <state relative-caret-position="-1539">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#410#411#0" expanded="true" />
@@ -82,11 +82,38 @@
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java8/behavior_parameterization/README.md">
+        <entry file="file://$PROJECT_DIR$/src/java8/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="617">
-                <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/java8/lambda/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="315">
+                <caret line="21" selection-start-line="21" selection-end-line="21" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="predicate.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/predicate.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java8/chapter3_behavior_parameterization/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1366">
+                <caret line="92" column="10" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
               </first_editor>
               <second_editor />
             </state>
@@ -133,6 +160,8 @@
         <option value="$PROJECT_DIR$/src/java8/behavior_parameterization/KoreaApples.java" />
         <option value="$PROJECT_DIR$/src/java8/behavior_parameterization/GreenColorApples.java" />
         <option value="$PROJECT_DIR$/src/java8/behavior_parameterization/BehaviorParameterization.java" />
+        <option value="$PROJECT_DIR$/src/java8/chapter3_behavior_parameterization/README.md" />
+        <option value="$PROJECT_DIR$/src/java8/lambda/README.md" />
       </list>
     </option>
   </component>
@@ -158,6 +187,11 @@
             <path>
               <item name="Java" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -171,7 +205,7 @@
               <item name="Java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="java8" type="462c0819:PsiDirectoryNode" />
-              <item name="behavior_parameterization" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter3_behavior_parameterization" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Java" type="b2602c69:ProjectViewProjectNode" />
@@ -179,13 +213,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="java8" type="462c0819:PsiDirectoryNode" />
               <item name="lambda" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java8" type="462c0819:PsiDirectoryNode" />
-              <item name="stream" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -195,6 +222,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/mos/git/Study-Book/Java/src/java8/chapter3_behavior_parameterization/README.md" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -221,14 +249,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BehaviorParameterization">
+  <component name="RunManager" selected="Application.Chapter3_BehaviorParameterization">
     <configuration name="BehaviorParameterization" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="java8.behavior_parameterization.BehaviorParameterization" />
+      <option name="MAIN_CLASS_NAME" value="java8.chapter3_behavior_parameterization.BehaviorParameterization" />
       <module name="Java" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="java8.behavior_parameterization.*" />
+          <option name="PATTERN" value="java8.chapter3_behavior_parameterization.BehaviorParameterization" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -305,11 +333,11 @@
       <item itemvalue="Application.Lambda" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Stream" />
-      <item itemvalue="Application.BehaviorParameterization" />
+      <item itemvalue="Application.Chapter3_BehaviorParameterization" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BehaviorParameterization" />
+        <item itemvalue="Application.Chapter3_BehaviorParameterization" />
         <item itemvalue="Application.Stream" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Lambda" />
@@ -331,6 +359,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -369,13 +398,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/method/Methods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/method/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -603,21 +625,6 @@
     <entry file="file://$PROJECT_DIR$/src/behavior_parameterization/README/md.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java8/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java8/lambda/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/method/Methods.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -730,20 +737,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java8/behavior_parameterization/README.md">
+    <entry file="file://$PROJECT_DIR$/src/java8/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="617">
-            <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-          </first_editor>
+          <first_editor />
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java8/behavior_parameterization/BehaviorParameterization.java">
+    <entry file="file://$PROJECT_DIR$/images/predicate.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java8/chapter3_behavior_parameterization/BehaviorParameterization.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2415">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
+        <state relative-caret-position="-1539">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#410#411#0" expanded="true" />
@@ -759,6 +767,31 @@
             <element signature="e#3053#3054#0" expanded="true" />
             <element signature="e#3099#3100#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java8/chapter3_behavior_parameterization/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1366">
+            <caret line="92" column="10" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java8/lambda/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="315">
+            <caret line="21" selection-start-line="21" selection-end-line="21" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
         </state>
       </provider>
     </entry>

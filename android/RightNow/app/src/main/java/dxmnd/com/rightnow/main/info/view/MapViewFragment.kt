@@ -11,6 +11,7 @@ import com.nhn.android.maps.maplib.NGeoPoint
 import com.nhn.android.maps.nmapmodel.NMapError
 import dxmnd.com.rightnow.R
 import dxmnd.com.rightnow.util.NAVER_CLIENT_KEY
+import dxmnd.com.rightnow.util.nmap.NMapFragment
 import kotlinx.android.synthetic.main.fragment_map_view.*
 
 
