@@ -55,6 +55,7 @@
 7. 게임에서는 TCP와 UDP중 어떤 방식을 주로 사용할까요?
 8. 3way handshake와 4way handshake를 설명해주세요.
 9. get방식과 post방식 그리고 CRUD에 대해 설명해주세요.
+10. TCP와 IP에 대해 설명해주세요.
 
 ### 운영체제
 1. 데드락에 대해서 설명하시오.
