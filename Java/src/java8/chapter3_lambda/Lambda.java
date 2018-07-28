@@ -1,4 +1,4 @@
-package java8.lambda;
+package java8.chapter3_lambda;
 
 import java.util.ArrayList;
 import java.util.Arrays;
