@@ -8,8 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.nhn.android.maps.NMapContext
 import com.nhn.android.maps.NMapController
-import com.nhn.android.maps.NMapView
-import com.nhn.android.maps.nmapmodel.NMapError
 import dxmnd.com.rightnow.R
 import dxmnd.com.rightnow.main.info.InfoContract
 import dxmnd.com.rightnow.main.info.adapter.InfoRecyclerVIewAdapter
@@ -17,8 +15,6 @@ import dxmnd.com.rightnow.main.info.adapter.item.BusInfoItem
 import dxmnd.com.rightnow.main.info.presenter.InfoPresenter
 import dxmnd.com.rightnow.util.NAVER_CLIENT_KEY
 import kotlinx.android.synthetic.main.fragment_bus_info.*
-import com.nhn.android.maps.maplib.NGeoPoint
-import dxmnd.com.rightnow.util.log
 
 
 class InfoFragment : Fragment(), InfoContract.View {
