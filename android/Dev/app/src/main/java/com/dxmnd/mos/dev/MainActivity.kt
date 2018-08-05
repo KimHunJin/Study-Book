@@ -1,10 +1,10 @@
 package com.dxmnd.mos.dev
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
-import com.dxmnd.mos.dev.recycler_view.view.RecyclerViewMainActivity
+import com.dxmnd.mos.dev.scroll_view_dynamic_view.ScrollDynamicActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun click(v : View) {
-        startActivity(Intent(this,RecyclerViewMainActivity::class.java))
+    fun click(v: View) {
+        startActivity(Intent(this, ScrollDynamicActivity::class.java))
     }
 }

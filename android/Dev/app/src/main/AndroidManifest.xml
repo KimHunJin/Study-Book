@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".recycler_view.view.RecyclerViewMainActivity"></activity>
+        <activity android:name=".recycler_view.view.RecyclerViewMainActivity" />
+        <activity android:name=".scroll_view_dynamic_view.ScrollDynamicActivity"></activity>
     </application>
 
 </manifest>

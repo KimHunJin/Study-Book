@@ -10,6 +10,22 @@ import com.nhn.android.maps.overlay.NMapPOIitem
 import com.nhn.android.mapviewer.overlay.NMapResourceProvider
 
 class NMapViewerResourceProvider(context: Context) : NMapResourceProvider(context), NMapCalloutCustomOldOverlay.ResourceProvider {
+    override fun getCalloutBackground(item: NMapOverlayItem): Drawable {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun getCalloutRightButtonText(item: NMapOverlayItem): String {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun getCalloutRightButton(item: NMapOverlayItem): Array<Drawable> {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun getCalloutRightAccessory(item: NMapOverlayItem): Array<Drawable> {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     override fun getOverlappedListViewId(): Int = 0
 
     override fun setOverlappedListViewLayout(p0: ListView?, p1: Int, p2: Int, p3: Int) {
@@ -36,17 +52,11 @@ class NMapViewerResourceProvider(context: Context) : NMapResourceProvider(contex
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun getCalloutBackground(p0: NMapOverlayItem?): Drawable {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
     override fun getListItemImageViewId(): Int {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun getCalloutRightButton(p0: NMapOverlayItem?): Array<Drawable> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
     override fun getCalloutTextColors(p0: NMapOverlayItem?): IntArray {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -68,15 +78,7 @@ class NMapViewerResourceProvider(context: Context) : NMapResourceProvider(contex
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun getCalloutRightButtonText(p0: NMapOverlayItem?): String {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
     override fun getLayoutIdForOverlappedListView(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun getCalloutRightAccessory(p0: NMapOverlayItem?): Array<Drawable> {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
