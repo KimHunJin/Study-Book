@@ -13,6 +13,7 @@ public class BJ_2775 {
         try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             int n = convertInt(input(br));
             for(int i=0;i<n;i++) {
+
                 unitTest(br);
             }
         } catch (IOException ie) {
