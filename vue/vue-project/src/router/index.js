@@ -10,5 +10,11 @@ export default new Router({
 		path: '/',
 		name: 'HelloWorld',
 		component: CasinoDapp
-	}]
+	},
+	{
+		path: '/test',
+		name: 'HelloWorld',
+		component: CasinoDapp
+	}
+	]
 })
