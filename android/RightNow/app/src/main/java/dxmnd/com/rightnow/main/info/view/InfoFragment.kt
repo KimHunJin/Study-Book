@@ -1,19 +1,18 @@
 package dxmnd.com.rightnow.main.info.view
 
+import android.app.FragmentManager
+import android.app.FragmentTransaction
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.nhn.android.maps.NMapContext
-import com.nhn.android.maps.NMapController
 import dxmnd.com.rightnow.R
 import dxmnd.com.rightnow.main.info.InfoContract
 import dxmnd.com.rightnow.main.info.adapter.InfoRecyclerVIewAdapter
 import dxmnd.com.rightnow.main.info.adapter.item.BusInfoItem
 import dxmnd.com.rightnow.main.info.presenter.InfoPresenter
-import dxmnd.com.rightnow.util.NAVER_CLIENT_KEY
 import kotlinx.android.synthetic.main.fragment_bus_info.*
 
 
@@ -23,9 +22,6 @@ class InfoFragment : Fragment(), InfoContract.View {
         set(value) {}
 
     private var p: InfoContract.Presenter? = null
-
-    private var nMapContext: NMapContext? = null
-    private var nMapController: NMapController? = null
 
     //    private var presenter: InfoPresenter? = null
     private var adapter: InfoRecyclerVIewAdapter? = null
@@ -38,10 +34,6 @@ class InfoFragment : Fragment(), InfoContract.View {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        nMapContext = NMapContext(context)
-        nMapContext?.apply {
-            this.onCreate()
-        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? = inflater.inflate(R.layout.fragment_bus_info, container, false)
@@ -66,6 +58,16 @@ class InfoFragment : Fragment(), InfoContract.View {
 
     }
 
+    override fun mapInit() {
+        val mapView = MapViewFragment()
+        var fragmentManager: FragmentManager? = activity?.fragmentManager
+        var transaction : FragmentTransaction? = fragmentManager?.beginTransaction()
+        transaction?.apply {
+            this.add(R.id.layout_bus_info_map, mapView)
+            this.commit()
+        }
+    }
+
     private fun addItem() {
 
         val items: ArrayList<BusInfoItem> = arrayListOf(
@@ -81,44 +83,4 @@ class InfoFragment : Fragment(), InfoContract.View {
             this.adapterContractModel?.addItems(items)
         }
     }
-
-    private fun mapInit() {
-        layout_bus_info_map.setClientId(NAVER_CLIENT_KEY)
-        nMapContext?.apply {
-            this.setupMapView(layout_bus_info_map)
-        }
-
-        nMapController = layout_bus_info_map.mapController
-
-
-    }
-
-    override fun onStart() {
-        super.onStart()
-        nMapContext?.apply {
-            this.onStart()
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        nMapContext?.apply {
-            this.onResume()
-        }
-    }
-
-    override fun onStop() {
-        nMapContext?.apply {
-            this.onStop()
-        }
-        super.onStop()
-    }
-
-    override fun onDestroy() {
-        nMapContext?.apply {
-            this.onDestroy()
-        }
-        super.onDestroy()
-    }
-
 }

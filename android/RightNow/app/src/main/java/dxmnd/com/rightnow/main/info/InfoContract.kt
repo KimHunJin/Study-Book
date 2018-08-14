@@ -6,7 +6,7 @@ import dxmnd.com.rightnow.main.info.adapter.model.BusInfoContract
 
 interface InfoContract {
     interface View : BaseView<Presenter> {
-
+        fun mapInit()
     }
 
     interface Presenter : BasePresenter {

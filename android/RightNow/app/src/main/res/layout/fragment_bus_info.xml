@@ -9,20 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.nhn.android.maps.NMapView
+        <RelativeLayout
             android:id="@+id/layout_bus_info_map"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@color/colorGray">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="MAP"
-                android:textColor="@color/colorWhite" />
-
-        </com.nhn.android.maps.NMapView>
+        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/layout_bus_info_bus_info"
