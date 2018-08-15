@@ -15,6 +15,9 @@ import dxmnd.com.rightnow.util.NAVER_CLIENT_KEY
 import dxmnd.com.rightnow.util.log
 import dxmnd.com.rightnow.util.nmap.NMapFragment
 import dxmnd.com.rightnow.util.nmap.NMapViewerResourceProvider
+import com.patloew.rxlocation.RxLocation
+
+
 
 
 class MapViewFragment : NMapFragment(), NMapView.OnMapViewTouchEventListener, NMapView.OnMapStateChangeListener {

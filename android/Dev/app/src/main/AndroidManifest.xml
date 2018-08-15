@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".recycler_view.view.RecyclerViewMainActivity" />
-        <activity android:name=".scroll_view_dynamic_view.ScrollDynamicActivity"></activity>
+        <activity android:name=".scroll_view_dynamic_view.ScrollDynamicActivity" />
+        <activity android:name=".key_press.KeyPressActivity"></activity>
     </application>
 
 </manifest>
