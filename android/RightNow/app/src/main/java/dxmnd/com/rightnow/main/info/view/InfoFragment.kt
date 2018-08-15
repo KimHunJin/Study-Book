@@ -2,6 +2,7 @@ package dxmnd.com.rightnow.main.info.view
 
 import android.app.FragmentManager
 import android.app.FragmentTransaction
+import android.location.Address
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -44,9 +45,13 @@ class InfoFragment : Fragment(), InfoContract.View {
             adapter = InfoRecyclerVIewAdapter(this)
         }
 
+        var address : Address
+
         p = InfoPresenter(this).apply {
             this.adapterContractModel = adapter
             this.adapterContractView = adapter
+            getLocation(context!!)
+            address = getLocation()
         }
 
         rcv_bus_info.adapter = adapter
@@ -55,6 +60,8 @@ class InfoFragment : Fragment(), InfoContract.View {
 
         addItem()
         mapInit()
+
+
 
     }
 

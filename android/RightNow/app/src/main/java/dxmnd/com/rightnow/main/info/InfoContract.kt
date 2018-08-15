@@ -1,9 +1,10 @@
 package dxmnd.com.rightnow.main.info
 
+import android.content.Context
+import android.location.Address
 import dxmnd.com.rightnow.base.BasePresenter
 import dxmnd.com.rightnow.base.BaseView
 import dxmnd.com.rightnow.main.info.adapter.model.BusInfoContract
-import dxmnd.com.rightnow.main.info.view.InfoFragment
 
 interface InfoContract {
     interface View : BaseView<Presenter> {
@@ -14,6 +15,6 @@ interface InfoContract {
         var adapterContractModel : BusInfoContract.Model?
         var adapterContractView : BusInfoContract.View?
 
-        fun getLocation()
+        fun getLocation(context: Context)
     }
 }
