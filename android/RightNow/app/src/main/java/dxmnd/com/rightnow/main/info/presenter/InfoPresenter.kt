@@ -7,6 +7,7 @@ import com.google.android.gms.location.LocationRequest
 import com.patloew.rxlocation.RxLocation
 import dxmnd.com.rightnow.main.info.InfoContract
 import dxmnd.com.rightnow.main.info.adapter.model.BusInfoContract
+import io.reactivex.disposables.Disposable
 
 class InfoPresenter(infoView: InfoContract.View) : InfoContract.Presenter {
 
@@ -20,13 +21,13 @@ class InfoPresenter(infoView: InfoContract.View) : InfoContract.Presenter {
     var currentLocation: Address? = null
 
     @SuppressLint("MissingPermission")
-    override fun getLocation(context: Context) {
-        var locationRequest = LocationRequest.create()
+    override fun getLocation(context: Context): Disposable? {
+        val locationRequest = LocationRequest.create()
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
 
-        var rxLocation = RxLocation(context)
+        val rxLocation = RxLocation(context)
 
-        rxLocation.location().updates(locationRequest)
+        return rxLocation.location().updates(locationRequest)
                 .flatMap { location -> rxLocation.geocoding().fromLocation(location).toObservable() }
                 .subscribe { address -> setLocation(address) }
 

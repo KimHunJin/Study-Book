@@ -12,4 +12,7 @@ public class RetrofitActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retrofit);
     }
+
+    private void retrofit() {
+    }
 }

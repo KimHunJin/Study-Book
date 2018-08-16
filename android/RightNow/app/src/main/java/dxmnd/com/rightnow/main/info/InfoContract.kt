@@ -5,6 +5,7 @@ import android.location.Address
 import dxmnd.com.rightnow.base.BasePresenter
 import dxmnd.com.rightnow.base.BaseView
 import dxmnd.com.rightnow.main.info.adapter.model.BusInfoContract
+import io.reactivex.disposables.Disposable
 
 interface InfoContract {
     interface View : BaseView<Presenter> {
@@ -15,6 +16,6 @@ interface InfoContract {
         var adapterContractModel : BusInfoContract.Model?
         var adapterContractView : BusInfoContract.View?
 
-        fun getLocation(context: Context)
+        fun getLocation(context: Context): Disposable?
     }
 }
