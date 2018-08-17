@@ -19,7 +19,8 @@
         <activity android:name=".recycler_view.view.RecyclerViewMainActivity" />
         <activity android:name=".scroll_view_dynamic_view.ScrollDynamicActivity" />
         <activity android:name=".key_press.KeyPressActivity" />
-        <activity android:name=".retrofit.RetrofitActivity"></activity>
+        <activity android:name=".retrofit.RetrofitActivity" />
+        <activity android:name=".map.MapActivity"></activity>
     </application>
 
 </manifest>

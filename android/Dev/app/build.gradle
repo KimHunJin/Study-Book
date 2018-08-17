@@ -28,18 +28,19 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0-alpha3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 
-    implementation 'com.android.support:recyclerview-v7:28.0.0-alpha3'
+    implementation 'com.android.support:recyclerview-v7:28.0.0-rc01'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation 'com.android.support:design:28.0.0-alpha3'
+    implementation 'com.android.support:design:28.0.0-rc01'
 
+    // rxjava retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation "io.reactivex.rxjava2:rxjava:2.2.0"
     implementation 'com.google.code.gson:gson:2.8.5'
@@ -50,5 +51,8 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
     implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.1'
     implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
+
+    // naver map api
+    implementation "com.naver.maps.open:naver-map-api:2.1.2@aar"
 
 }

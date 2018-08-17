@@ -55,7 +55,6 @@ class MapViewFragment : NMapFragment(), NMapView.OnMapViewTouchEventListener, NM
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val v  = inflater?.inflate(R.layout.fragment_map_view, container, false)!!
 
-        log(NAVER_CLIENT_KEY)
         n_map_view = v.findViewById(R.id.n_map_view)
         n_map_view?.apply {
             this.setClientId(dxmnd.com.rightnow.util.NAVER_CLIENT_KEY)

@@ -10,7 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import io.reactivex.Observable;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.OkHttpClient;
@@ -69,10 +68,10 @@ public class RetrofitClient extends RxAppCompatActivity{
         Observable<List<ResponseModel>> loginObserver = createBaseApi().service.login(params);
         loginObserver.subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .compose(this.<List<ResponseModel>>bindToLifecycle())
+                .compose(this.bindToLifecycle())
                 .subscribe(data -> {
                         callback.onSuccess(200,data);
-                        }, e -> callback.onError()
+                        }, e -> callback.onError(e)
                 );
     }
 }
