@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.fail;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,25 +6,30 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BJ_1005_Time_Over_3 {
-    public static void main(String[] args) {
-        new BJ_1005_Time_Over_3().solution();
-    }
+/**
+ * Time Over
+ */
+public class BJ_1005_Time_Over {
 
-    private class Build {
+    private class BuildingRule {
+        int number;
         int weight;
-        //        List<Integer> available = new ArrayList<>();
         List<Integer> need = new ArrayList<>();
 
-        Build(int weight) {
+        BuildingRule(int number, int weight) {
+            this.number = number;
             this.weight = weight;
         }
     }
 
-    private void solution() {
+    public static void main(String[] args) {
+        new BJ_1005_Time_Over().solve();
+    }
+
+    private void solve() {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             int n = iRead(br);
-            for (int i = 0; i < n; i++) {
+            while (n-- > 0) {
                 unitSolution(br);
             }
         } catch (IOException ie) {
@@ -32,29 +37,40 @@ public class BJ_1005_Time_Over_3 {
         }
     }
 
-    private List<Build> list;
-
     private void unitSolution(BufferedReader br) {
-        list = makeList(br);
+
+        List<BuildingRule> list = makeList(br);
         int destination = iRead(br);
 
-        int result = calTime(destination);
+        int start = 0;
+        for(int i=1;i<list.size();i++) {
+            if(list.get(i).need.size()==0) {
+                start = i;
+            }
+        }
+
+        int result = build(start, list, destination, list.get(destination).weight);
         System.out.println(result);
+
     }
 
-    private int calTime(int start) {
-        if (list.get(start).need.size() == 0) {
+    private int build(int start, List<BuildingRule> list, int destination, int currentTime) {
+        BuildingRule b = list.get(destination);
+
+        if (destination == start) {
             return list.get(start).weight;
         } else {
-            int max = 0;
-            for (int i = 0; i < list.get(start).need.size(); i++) {
-                max = Integer.max(max, list.get(start).weight + calTime(list.get(start).need.get(i)));
+            int value = 0;
+            for (int i = 0; i < b.need.size(); i++) {
+                destination = b.need.get(i);
+                int time = currentTime + build(start, list, destination, list.get(destination).weight);
+                value = value > time ? value : time;
             }
-            return max;
+            return value;
         }
     }
 
-    private List<Build> makeList(BufferedReader br) {
+    private List<BuildingRule> makeList(BufferedReader br) {
         String[] size = input(br).split(" ");
 
         int N = convertInt(size[0]);
@@ -62,11 +78,11 @@ public class BJ_1005_Time_Over_3 {
 
         String[] weights = input(br).split(" ");
 
-        List<Build> buildingInfo = new ArrayList<>();
-        buildingInfo.add(new Build(0));  // 1부터 시작을 위한 dummy
+        List<BuildingRule> buildingInfo = new ArrayList<>();
+        buildingInfo.add(new BuildingRule(0, 0));  // 1부터 시작을 위한 dummy
 
         for (int i = 0; i < N; i++) {
-            buildingInfo.add(new Build(convertInt(weights[i])));
+            buildingInfo.add(new BuildingRule(i + 1, convertInt(weights[i])));
         }
 
         for (int i = 1; i <= rule; i++) {
@@ -74,11 +90,11 @@ public class BJ_1005_Time_Over_3 {
             int priority = convertInt(info[0]);
             int later = convertInt(info[1]);
 
-//            buildingInfo.get(priority).available.add(later);
             buildingInfo.get(later).need.add(priority);
         }
         return buildingInfo;
     }
+
 
     private int convertInt(String s) {
         return Integer.parseInt(s);

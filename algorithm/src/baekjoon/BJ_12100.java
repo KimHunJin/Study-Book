@@ -18,38 +18,64 @@ public class BJ_12100 {
         RIGHT
     }
 
+    private List<DIR> d = new ArrayList<>();
+    private int max = 0;
+
     private void solve() {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             int[][] map = makeMap(br);
             int row = map.length;
             int col = map[0].length;
-            List<DIR> d = new ArrayList<>();
             d.add(DIR.TOP);
             d.add(DIR.DOWN);
             d.add(DIR.RIGHT);
             d.add(DIR.LEFT);
 
-            for (DIR dir : d) {
-                System.out.println(dir);
-                System.out.println("-----------");
-                int[][] newMap = new int[row][col];
-                for (int i = 0; i < row; i++) {
-                    for (int j = 0; j < col; j++) {
-                        newMap[i][j] = map[i][j];
-                    }
-                }
-                print(sum(move(newMap,dir), dir));
-            }
+            _2048(map, 0);
+
+            System.out.println(max);
 
         } catch (IOException ie) {
             ie.printStackTrace();
         }
     }
 
-    private int[][] move(int[][] map, DIR d) {
+
+    private void _2048(int[][] map, int count) {
+        count++;
+        if (count > 5) {
+            for (int i = 0; i < map.length; i++) {
+                for (int j = 0; j < map[0].length; j++) {
+                    if (max < map[i][j]) {
+                        max = map[i][j];
+                    }
+                }
+            }
+
+            return;
+        }
+        for (DIR dir : d) {
+            int[][] newMap = copy(map);
+            _2048(sum(move(newMap, dir, count), dir, count), count);
+        }
+    }
+
+    private int[][] copy(int[][] map) {
         int row = map.length;
         int col = map[0].length;
-        switch (d) {
+        int[][] newMap = new int[row][col];
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                newMap[i][j] = map[i][j];
+            }
+        }
+        return newMap;
+    }
+
+    private int[][] move(int[][] map, DIR dir, int count) {
+        int row = map.length;
+        int col = map[0].length;
+        switch (dir) {
             case TOP: {
                 for (int i = 0; i < col; i++) {
                     for (int j = 0; j < row; j++) {
@@ -160,7 +186,7 @@ public class BJ_12100 {
         return map;
     }
 
-    private int[][] sum(int[][] map, DIR d) {
+    private int[][] sum(int[][] map, DIR d, int count) {
         int row = map.length;
         int col = map[0].length;
 
@@ -210,13 +236,13 @@ public class BJ_12100 {
                 break;
             }
         }
-        return move(map, d);
+        return move(map, d, count);
     }
 
     private void print(int[][] map) {
         for (int a[] : map) {
             for (int b : a) {
-                System.out.print(b + " ");
+                System.out.print(b + "\t");
             }
             System.out.println();
         }
