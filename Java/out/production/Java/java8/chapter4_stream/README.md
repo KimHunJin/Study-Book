@@ -26,7 +26,7 @@ for(Dish d: lowCaloricDishes) {
 ```
 
 [문제점]
-1. lowCaloricDishes라는 가비지 변수가 사용 됨
+* lowCaloricDishes라는 가비지 변수가 사용 됨
 
 ex) 스트림을 이용한 개선 코드
 ```aidl
@@ -59,7 +59,7 @@ List<String> lowCaloricDishesName =
 > 5. 가독성과 명확성이 유지된다.
 > 6. filter(or sorted, map, collect) 같은 연산은 **고수준 빌딩 블록** 으로 이루어져 있어 특정 스레딩 모델에 제한되지 않고 자유롭게 사용 가능하다.
 
-![Stream Pipe Line]()
+![Stream Pipe Line](https://github.com/KimHunJin/Study-Book/blob/master/Java/images/stream_pipeline.png)
 
 ex) 형식에 따라 요리 그룹화 하기
 ```aidl
@@ -125,4 +125,99 @@ System.out.println(threeHighCaloricDishNames); // out {pork, beef, chicken}
 데이터 처리 연산 : filter, map, limit, collect // collect를 제외한 모든 연산은 서로 **파이프라인**을 형성 <br/>
 결과 반환 : collect 연산으로 반환.
 
-#### 6. filter
+
+### 스트림과 컬렉션
+> 연속성 : 순차적으로 값에 접근
+
+비고 | 컬렉션 | 스트림
+---|----|----
+영화 비유 | DVD에 저장된 영화 | 스트리밍하는 영화
+저장 | 모든 값을 저장 | 요청할 떄만 저장
+
+#### 스트림의 소비
+> 스트림은 딱 한번만 탐색 할 수 있음.
+
+ex) 한 번 소비하는 스트림 예제
+```aidl
+List<String> title = Arrays.asList("Java8", "In", "Action");
+Stream<String> s = title.stream();
+s.forEach(System.out::println); // 각 단어 출력
+s.forEach(System.out::println); 
+// error ; java.lang.IllegalStateException (스트림이 이미 소비되었거나 닫힘)
+```
+
+#### 컬렉션의 외부 반복과 스트림의 내부 반복
+* 외부 반복
+> 사용자가 직접 요소를 반복 하는 것 (ex, for-each)
+
+ex) 컬렉션: for-each를 이용한 외부 반복
+```aidl
+List<String> names = new ArrayList<>();
+for(Dish d: menu) {
+    names.add(d.getName());
+}
+```
+
+ex) 컬렉션: 내부적으로 숨겨졌던 반복자를 사용한 외부 반복
+```aidl
+List<String> names = new ArrayList<>();
+Iterator<String> iterator = menu.iterator();
+while(iterator.hasNext()) {
+    Dish d = iterator.next();
+    names.add(d.getName());
+}
+```
+
+* 내부 반복
+> 반복을 알아서 처리하고 결과 스트림값을 어딘가에 저장
+
+ex) 스트림: 내부 반복
+```aidl
+List<String> names = menu.stream()
+                         .map(Dish::getName)
+                         .collect(toList());
+```
+
+### 스트림 연산
+
+* 중간 연산 (intermediate operation)
+> 연결할 수 있는 스트림 연산 <br/>
+파이프라인에 실행하기 전까지는 아무 연산도 수행하지 않음. (게으름)
+
+* 최종 연산
+> 스트림 파이프라인에서 결과를 도출 <br/>
+보통 List, Integer, void 등 스트림 이외의 결과가 반환.
+
+### 스트림 이용
+* 질의 수행 **데이터 소스**
+* 스트림 파이프라인을 구성할 **중간 연산** 연결
+* 스트림 파이프라인을 실행하고 결과를 만들 **최종 연산**
+
+> 스트림 파이프라인의 개념은 빌더 패턴과 비슷
+
+[ 중간 연산 ]
+
+연산 | 형식 | 반환 형식 | 연산의 인수 | 함수 디스크립터
+----|-----|--------|-----------|-----------
+filter| 중간 연산 | Stream<T> | Predicate<T> | T -> boolean
+map | 중간 연산 | Stream<T> | Function<T, R> | T -> R
+limit | 중간 연산 | Stream<T> | |
+sorted | 중간 연산 | Stream<T> | Comparator<T> | (T, T) -> int
+distinct | 중간 연산 | Stream<T> | |
+
+[ 최종 연산 ]
+
+연산 | 형식 | 목적
+----|-----|-----
+forEach | 최종 연산 | 스트림의 각 요소를 소비하면서 람다를 적용. void 반환
+count | 최종 연산 | 스트림의 요소 개수를 반환. long 반환
+collect | 최종 연산 | 스트림을 리듀스해서 리스트, 맵, 정수 형식의 컬렉션을 만듬.
+
+### 요약
+1. 스트림은 소스에서 추출된 연속 요소로, 데이터 처리 연산을 지원
+2. 스트림은 내부 반복을 지원. (내부 반복은 filter, map, sorted 등의 연산으로 반복을 추상화)
+3. 스트림은 중간 연산과 최종 연산이 있음.
+4. filter와 map처럼 스트림을 반환하면서 다른 연산과 연결될 수 있는 연산을 중간 연산이라고 함. <br/>
+중간 연산을 이용해 ㅏ파이프라인을 구성할 수 있지만, 중간 연산으로는 어떤 결과도 생성할 수 없음.
+5. forEach나 count처럼 스트림 파이프라인을 처리해서 스트림이 아닌 결과를 반환하는 연산을 최종 연산이라고 함.
+6. 스트림의 요소는 요청할 때만 계산됨.
