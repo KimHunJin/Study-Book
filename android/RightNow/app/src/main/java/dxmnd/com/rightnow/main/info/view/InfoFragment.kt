@@ -1,5 +1,6 @@
 package dxmnd.com.rightnow.main.info.view
 
+import android.annotation.SuppressLint
 import android.app.FragmentManager
 import android.app.FragmentTransaction
 import android.location.Address
@@ -33,11 +34,10 @@ class InfoFragment : Fragment(), InfoContract.View {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
+            = inflater.inflate(R.layout.fragment_bus_info, container, false)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? = inflater.inflate(R.layout.fragment_bus_info, container, false)
+    private var address : Address? = null
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -45,7 +45,6 @@ class InfoFragment : Fragment(), InfoContract.View {
             adapter = InfoRecyclerVIewAdapter(this)
         }
 
-        var address : Address
 
         p = InfoPresenter(this).apply {
             this.adapterContractModel = adapter
@@ -53,6 +52,7 @@ class InfoFragment : Fragment(), InfoContract.View {
             getLocation(context!!)
             address = getLocation()
         }
+
 
         rcv_bus_info.adapter = adapter
         rcv_bus_info.setHasFixedSize(true)
@@ -62,13 +62,17 @@ class InfoFragment : Fragment(), InfoContract.View {
         mapInit()
 
 
-
     }
 
+    @SuppressLint("CommitTransaction")
     override fun mapInit() {
         val mapView = MapViewFragment()
-        var fragmentManager: FragmentManager? = activity?.fragmentManager
-        var transaction : FragmentTransaction? = fragmentManager?.beginTransaction()
+        address?.let {
+            mapView.setLocation(it.latitude, it.longitude)
+        }
+
+        val fragmentManager: FragmentManager? = activity?.fragmentManager
+        val transaction : FragmentTransaction? = fragmentManager?.beginTransaction()
         transaction?.apply {
             this.add(R.id.layout_bus_info_map, mapView)
             this.commit()
