@@ -1,16 +1,16 @@
 ## 리팩토링, 테스팅, 디버깅
 
-###1. 가독성과 유연성을 개선하는 리팩토링
+### 1. 가독성과 유연성을 개선하는 리팩토링
 > 간결성, 유연성
 
-####1.1 코드 가독성 개선
+#### 1.1 코드 가독성 개선
 가독성이 좋다 : 어떤 코드를 다른 사람도 쉽게 이해할 수 있다.
 
 자바8에서 제공하는 코드 가독성에 도움을 주는 기능
 * 코드의 장황함을 줄여서 쉽게 이해할 수 있는 코드를 구현할 수 있다.
 * 메서드 레퍼런스와 스트림 API를 이용해서 코드의 의도를 쉽게 표현할 수 있다.
 
-####1.2 익명 클래스를 람다 표현식으로 리팩토링하기
+#### 1.2 익명 클래스를 람다 표현식으로 리팩토링하기
 
 ex) 익명 클래스 사용하는 이전 코드
 ```aidl
@@ -78,7 +78,7 @@ ex) 람다 표현식 사용 명시적 형변환
 doSomething((Task)() -> System.out.println("Dangger dangger!!")); // 모호함 해소
 ```
 
-####1.3 람다 표현식을 메서드 레퍼런스로 리팩토링하기
+#### 1.3 람다 표현식을 메서드 레퍼런스로 리팩토링하기
 
 ex) 람다 표현식
 ```aidl
@@ -111,7 +111,7 @@ public class Dish {
 ```
 comparing, maxBy 같은 정적 헬퍼 메서드와 sum, maximum 등 리듀싱 연산을 같이 사용하면 좋음.
 
-####1.4 명령형 데이터 처리를 스트림으로 리팩토링하기
+#### 1.4 명령형 데이터 처리를 스트림으로 리팩토링하기
 
 ex) 두 가지 패턴으로 엉킨 코드
 ```aidl
@@ -130,7 +130,7 @@ menu.parallelStream()
     .collect(toList());
 ```
 
-####1.5 코드 유연성 개선
+#### 1.5 코드 유연성 개선
 > 동작 파라미터화
 
 1.5.1 조건부 연기 실행
@@ -186,10 +186,10 @@ public interface BufferedReaderProcessor {
 }
 ```
 
-###2. 람다로 객체지향 디자인 패턴 리팩토링하기
+### 2. 람다로 객체지향 디자인 패턴 리팩토링하기
 > 디자인 패천 : 재사용을 높이는 방법
 
-####2.1 전략 패턴
+#### 2.1 전략 패턴
 > 한 유형의 알고리즘을 보유한 상태에서 런타임에 적절한 알고리즘을 선택하는 기법
 * 알고리즘을 나타내는 인터페이스
 * 다양한 알고리즘을 나타내는 한 개 이상의 인터페이스 구현(ConcreteStrategyA, ConcreteStrategyB 같은 구체적 구현 클래스)
@@ -240,7 +240,7 @@ Validator lowerCaseValidator = new Validator((String s) -> s.matches("\\d+"));
 boolean b2 = lowerCaseValidator.validate("bbbb");
 ```
 
-####2.2 템플릿 메서드
+#### 2.2 템플릿 메서드
 > 알고리즘의 개요를 제시한 다음 알고리즘의 일부를 고칠 수 있는 유연함을 제공해야 할 때 사용 <br/>
 즉, 이 알고리즘을 사용하고 싶은데 조금 고쳐야 하는 상황에 적절
 
@@ -266,7 +266,7 @@ public void processCustomer(int id, Consumer<Customer> makeCustomerHappy) {
 new OnlineBankingLambda().processCustomer(1337, (Customer c) -> System.out.println("Hello " + c.getName());
 ```
 
-####2.3 옵저버 패턴
+#### 2.3 옵저버 패턴
 > 어떤 이벤트가 발생해쓸 떄 한 객체(주제)가 다른 객체 리스트(옵저버)에 자동으로 알림을 보내야 하는 상황일 때 사용
 ![옵저버 패턴](https://github.com/KimHunJin/Study-Book/blob/master/Java/images/observer_pattern.png)
 
@@ -336,7 +336,7 @@ f.registerObserver((String tweet) -> {
 });
 ```
 
-####2.4 의무 체인 패턴
+#### 2.4 의무 체인 패턴
 > 한 객체가 어떤 작업을 처리한 다음에 다른 객체로 결과를 전달하고, 다른 객체도 해야 할 작업을 처리한 다음에 또 다른 객체로 전달하는 방식.
 
 ex) 작업처리 예시 코드
@@ -397,7 +397,7 @@ Function<String, String> pipeline =
 String result = pipeline.apply("Aren't labdas really sexy?!!");
 ```
 
-####2.5 팩토리 패턴
+#### 2.5 팩토리 패턴
 > 인스턴스화 로직을 클라이언트에 노출하지 않고 객체를 만들 때 사용
 
 ex) 다양한 상품 만드는 Factory 클래스
@@ -443,7 +443,7 @@ public interface TriFunction<T, U, V, R> {
 Map<String, TriFunction<Integer, Integer, String, Product>> map = new HashMap<>();
 ```
 
-###3. 람다 테스팅
+### 3. 람다 테스팅
 > 프로그램이 의도대로 동작하는지 확인할 수 있는 단위 테스팅 진행.
 
 ex) 포인트 단위 테스트
@@ -473,7 +473,7 @@ public class Point {
 }
 ```
 
-####3.1 보이는 람다 표현식의 동작 테스팅
+#### 3.1 보이는 람다 표현식의 동작 테스팅
 ex) 람다 표현식 테스트 (compareByXAndThenY 라는 정적 클래스 추가 가정)
 ```aidl
 public class Point {   
@@ -492,7 +492,7 @@ public void testComparingtzwoPoints() throws Exception {
 
 ```
 
-####3.2 람다를 사용하는 메서드의 동작에 집중하라
+#### 3.2 람다를 사용하는 메서드의 동작에 집중하라
 > 람다의 목표 : 정해진 동작을 다른 메서드에서 사용할 수 있도록 하나의 조각으로 캡슐화 하는 것. <br/>
 세부구현을 포함하는 람다 표현식을 공개하지 말하야 함.
 
@@ -513,9 +513,9 @@ public void testMoveAllPointsRightBy() throws Exception {
 }
 ```
 
-####3.3 복잡한 람다를 개별 메서드로 분할하기
+#### 3.3 복잡한 람다를 개별 메서드로 분할하기
 
-####3.4 고차원 함수 테스팅
+#### 3.4 고차원 함수 테스팅
 ex) filter 메서드 테스트
 ```aidl
 @Test
@@ -529,19 +529,19 @@ public void testFilter() throws Exception {
 ```
 **테스트 해야 할 메서드가 다른 메서드를 반환하는 문제 발생!**
 
-###4. 디버깅
+### 4. 디버깅
 문제 발생 시 확인해야 할 두 가지
 * 스택 트레이스
 * 로깅
 
-####4.1 스택 트레이스 확인
+#### 4.1 스택 트레이스 확인
 > 스택 프레임 : 프로그램이 중단 됐을 때 에러 내용이 담기는 곳
 
 람다에서 에러 발생 시 특이한 정보가 담김
 
-####4.2 정보 로깅
+#### 4.2 정보 로깅
 
-###5. 요약
+### 5. 요약
 1. 람다 표현식으로 가독성이 좋고 더 유연한 코드를 만들 수 있다.
 2. 익명 클래스는 람다 표현식으로 바꾸는 것이 좋다. 하지만 이때 this, 변수 섀도 등 미묘하게 의미상 다른 내용이 있음을 주의하자.
 메서드 레퍼런스로 람다 표현식보다 더 가독성이 좋은 코드를 구현할 수 있다.
