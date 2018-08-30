@@ -11,7 +11,6 @@ import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
 import com.patloew.rxlocation.RxLocation
 
-
 fun log(any : Any) {
     Logger.addLogAdapter(AndroidLogAdapter())
 

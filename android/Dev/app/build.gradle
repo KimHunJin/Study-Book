@@ -51,6 +51,8 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
     implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.1'
     implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
+    implementation 'com.squareup.retrofit2:converter-simplexml:2.4.0'
+
 
     // naver map api
     implementation "com.naver.maps.open:naver-map-api:2.1.2@aar"
