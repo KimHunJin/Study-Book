@@ -196,7 +196,7 @@ public interface BufferedReaderProcessor {
 * 전략 객체를 사용하는 한 개 이상의 클라이언트
 ![전략 디자인 패턴](https://github.com/KimHunJin/Study-Book/blob/master/Java/images/strategy_pattern.png)
 
-ex) 전략 디자인패턴
+ex) 전략 디자인 패턴
 ```
 public interface ValidationStrategy {
     boolean execute(String s);
