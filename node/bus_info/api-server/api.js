@@ -68,7 +68,17 @@ router.post('/addBusInfo', function(req, res, next) {
                         res.end();
                 }
         }).then(url => {
-                return request(url);
+                return new Promise(function(resolve, reject) {
+                        c.isCheckBus(busRouteId).then(value => {
+                                resolve(value);
+                        });
+                });
+        }).then(url => {
+                if(value == true) {
+                        // get mysql
+                } else {
+                        return request(url);                        
+                }
         }).then(xml => {
                 return new Promise(function(resolve, reject) {
                         parser.parseString(xml, function(err, result) {
