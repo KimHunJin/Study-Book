@@ -1,4 +1,4 @@
-package kakao;
+package kakao.kakao_2017;
 
 public class Kakao_2017_7 {
     public static void main(String[] args) {

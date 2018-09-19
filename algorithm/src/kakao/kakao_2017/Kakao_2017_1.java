@@ -1,6 +1,4 @@
-package kakao;
-
-import java.util.Scanner;
+package kakao.kakao_2017;
 
 public class Kakao_2017_1 {
     public static void main(String[] args) {

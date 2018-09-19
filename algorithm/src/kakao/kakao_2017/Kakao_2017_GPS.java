@@ -1,4 +1,4 @@
-package kakao;
+package kakao.kakao_2017;
 
 public class Kakao_2017_GPS {
 
