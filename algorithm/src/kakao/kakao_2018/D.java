@@ -1,4 +1,4 @@
-package kakao;
+package kakao.kakao_2018;
 
 public class D {
     public static void main(String[] args) {

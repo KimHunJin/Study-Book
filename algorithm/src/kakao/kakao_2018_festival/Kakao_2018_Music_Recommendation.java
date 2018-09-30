@@ -1,4 +1,4 @@
-package kakao.kakao_2018;
+package kakao.kakao_2018_festival;
 
 import java.io.BufferedReader;
 import java.io.IOException;
