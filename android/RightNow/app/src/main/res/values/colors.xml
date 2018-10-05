@@ -8,4 +8,6 @@
     <color name="colorGreen">#33cc55</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorRed">#dd3344</color>
+    <color name="colorRightPink">#FEDBD0</color>
+    <color name="colorDoubleRightPink">#FEEAE6</color>
 </resources>
