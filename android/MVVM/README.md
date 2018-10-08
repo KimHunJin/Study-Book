@@ -1,7 +1,9 @@
 ## MVVM Pattern / Retrofit2 / Dagger2 / rxjava2(rxandroid2)
 
 ### MVVM Pattern
-> Model + View + ViewModel
+> Model + View + ViewModel <br/>
+> [MVVM Pattern 소개](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/enterprise-application-patterns/mvvm)
+> [데이터 바인딩 라이브러리](https://developer.android.com/topic/libraries/data-binding/)
 
 ![MVVM Architecture](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/enterprise-application-patterns/mvvm-images/mvvm.png)
 
