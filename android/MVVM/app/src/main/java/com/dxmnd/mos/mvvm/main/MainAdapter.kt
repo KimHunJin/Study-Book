@@ -12,7 +12,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
 
 
-    private lateinit var busList: List<ServiceModel>
+    private lateinit var busList: List<ServiceModel.BusArriveInfoModel>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainAdapter.ViewHolder {
         val binding: ItemBusBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.item_bus, parent, false)
@@ -27,7 +27,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         return if(::busList.isInitialized) busList.size else 0
     }
 
-    fun updateBusList(busList: List<ServiceModel>) {
+    fun updateBusList(busList: List<ServiceModel.BusArriveInfoModel>) {
         this.busList = busList
         notifyDataSetChanged()
     }
@@ -36,7 +36,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
         private val viewModel = MainViewModel()
 
-        fun bind(bus: ServiceModel) {
+        fun bind(bus: ServiceModel.BusArriveInfoModel) {
             viewModel.bind(bus)
             binding.viewModel = viewModel
         }

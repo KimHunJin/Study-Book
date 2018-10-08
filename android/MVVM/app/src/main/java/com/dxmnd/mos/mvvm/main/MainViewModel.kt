@@ -9,9 +9,9 @@ class MainViewModel:BaseViewModel() {
     private val busId = MutableLiveData<String>()
     private val busNumber = MutableLiveData<String>()
 
-    fun bind(serviceModel: ServiceModel){
-        busId.value = serviceModel.busRouteId
-        busNumber.value = serviceModel.busRouteNm
+    fun bind(serviceModel: ServiceModel.BusArriveInfoModel){
+        busId.value = serviceModel.first_bus_time
+        busNumber.value = serviceModel.second_bus
     }
 
     fun getBusId() = busId

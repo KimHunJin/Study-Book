@@ -31,7 +31,7 @@ class MainListViewModel: BaseViewModel() {
 
 
     private fun loadBus() {
-        subcription = serviceAPI.getBusList("113")
+        subcription = serviceAPI.getBUsArriveList("1139", "110000126")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnSubscribe{onRetrievePostListStart()}
@@ -51,7 +51,7 @@ class MainListViewModel: BaseViewModel() {
         loadingVisibility.value = View.GONE
     }
 
-    private fun onRetrievePostListSuccess(busList: List<ServiceModel>){
+    private fun onRetrievePostListSuccess(busList: List<ServiceModel.BusArriveInfoModel>){
         mainAdapter.updateBusList(busList)
     }
 
