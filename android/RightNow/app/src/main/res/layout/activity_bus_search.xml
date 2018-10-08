@@ -34,5 +34,6 @@
         android:layout_marginRight="8dp"
         android:src="?android:attr/actionModeWebSearchDrawable"
         app:layout_constraintEnd_toEndOf="@+id/edt_search"
-        tools:layout_editor_absoluteY="37dp" />
+        tools:layout_editor_absoluteY="37dp"
+        tools:targetApi="lollipop" />
 </android.support.constraint.ConstraintLayout>

@@ -15,7 +15,6 @@ class BusApiService(retrofit:Retrofit) {
     private val api = retrofit.create(RetrofitService::class.java)
 
     fun getBusList(request :RequestModel) :Maybe<ResponseModel>{
-        api.getBusList(request.getNumber())
-                .
+        return api.getBusList(request.getNumber())
     }
 }
