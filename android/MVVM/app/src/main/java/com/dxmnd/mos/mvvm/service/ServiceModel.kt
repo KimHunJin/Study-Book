@@ -1,10 +1,10 @@
 package com.dxmnd.mos.mvvm.service
 
 data class ServiceModel(
-        val id: String,
-        val number: String,
-        val firstTime: String,
-        val lastTime: String,
-        val type: Int,
+        val busRouteId: String,
+        val busRouteNm: String,
+        val firstBusTm: String,
+        val lastBusTm: String,
+        val routeType: String,
         val term: String
 )

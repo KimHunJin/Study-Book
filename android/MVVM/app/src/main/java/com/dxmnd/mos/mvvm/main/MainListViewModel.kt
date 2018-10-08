@@ -1,6 +1,7 @@
 package com.dxmnd.mos.mvvm.main
 
 import android.arch.lifecycle.MutableLiveData
+import android.util.Log
 import android.view.View
 import com.dxmnd.mos.mvvm.R
 import com.dxmnd.mos.mvvm.base.BaseViewModel
@@ -30,14 +31,14 @@ class MainListViewModel: BaseViewModel() {
 
 
     private fun loadBus() {
-        subcription = serviceAPI.getBusList()
+        subcription = serviceAPI.getBusList("113")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnSubscribe{onRetrievePostListStart()}
                 .doOnTerminate{onRetrievePostListFinish()}
                 .subscribe(
                         {result -> onRetrievePostListSuccess(result)},
-                        {onRetrievePostListError()}
+                        {err -> onRetrievePostListError(err)}
                 )
     }
 
@@ -54,7 +55,8 @@ class MainListViewModel: BaseViewModel() {
         mainAdapter.updateBusList(busList)
     }
 
-    private fun onRetrievePostListError(){
+    private fun onRetrievePostListError(err: Throwable) {
+        Log.e("Error",err.message)
         errorMessage.value = R.string.post_error
     }
 

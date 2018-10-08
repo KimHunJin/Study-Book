@@ -8,6 +8,7 @@ import android.support.annotation.StringRes
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import com.dxmnd.mos.mvvm.databinding.ActivityMainBinding
 import com.dxmnd.mos.mvvm.main.MainListViewModel
 
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         listViewModel = ViewModelProviders.of(this).get(MainListViewModel::class.java)
         listViewModel.errorMessage.observe(this, Observer { errorMessage ->
+            Log.e("Error", errorMessage.toString())
             if (errorMessage != null) showError(errorMessage) else hideError()
         })
 
