@@ -23,12 +23,13 @@ class MainListViewModel: BaseViewModel() {
     val errorMessage:MutableLiveData<Int> = MutableLiveData()
     val errorClickListener = View.OnClickListener { loadBus() }
 
+    val searchClickListener = View.OnClickListener { loadBus() }
+
     val loadingVisibility: MutableLiveData<Int> = MutableLiveData()
 
     init {
         loadBus()
     }
-
 
     private fun loadBus() {
         subcription = serviceAPI.getBUsArriveList("1139", "110000126")

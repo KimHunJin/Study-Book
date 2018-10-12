@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.dxmnd.mos.dev.R;
+import com.dxmnd.mos.dev.retrofit.client.RetrofitCallback;
+import com.dxmnd.mos.dev.retrofit.client.RetrofitClient;
 
 public class RetrofitActivity extends AppCompatActivity {
 
@@ -14,5 +16,6 @@ public class RetrofitActivity extends AppCompatActivity {
     }
 
     private void retrofit() {
+        RetrofitClient.getInstance(this);
     }
 }
