@@ -15,7 +15,7 @@
 	flutter doctor
 	```
 
-	![](https://github.com/KimHunJin/Study-Book/edit/master/flutter/flutter-run-doctor.png)
+	![](https://github.com/KimHunJin/Study-Book/blob/master/flutter/flutter-run-doctor.png)
 
 5. start android studio
 
