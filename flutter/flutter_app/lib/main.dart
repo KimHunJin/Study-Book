@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'SecondPage.dart';
 
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
+
+  final routes = <String,WidgetBuilder> {
+    SecondPage.tag: (context) => SecondPage(),
+    MyHomePage.tag: (context) => MyHomePage(title: 'home',),
+  };
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -19,12 +27,16 @@ class MyApp extends StatelessWidget {
         // counter didn't reset back to zero; the application is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: SecondPage(),
+      routes: routes,
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+
+  static String tag = 'my-home-page';
+
   MyHomePage({Key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -96,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
-          ],
+           ],
         ),
       ),
       floatingActionButton: new FloatingActionButton(
