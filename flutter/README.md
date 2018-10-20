@@ -14,7 +14,9 @@
 	```
 	flutter doctor
 	```
-	
+
+	![](https://github.com/KimHunJin/Study-Book/edit/master/flutter/flutter-run-doctor.png)
+
 5. start android studio
 
 6. preferences -> plugins -> Browse repositories -> flutter install
