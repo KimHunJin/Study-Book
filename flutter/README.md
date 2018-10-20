@@ -2,7 +2,8 @@
 
 1. install flutter SDK [link](https://flutter.io/setup-macos/)
 2. unzip download file
-    ```unzip ~/download_dir/flutter_macos_v0.9.4-beta.zip
+    ```
+    unzip ~/download_dir/flutter_macos_v0.9.4-beta.zip
     ```
 3. Add the flutter tool to your path
 	```
@@ -13,7 +14,9 @@
 	```
 	flutter doctor
 	```
-	
+
+	![](https://github.com/KimHunJin/Study-Book/edit/master/flutter/flutter-run-doctor.png)
+
 5. start android studio
 
 6. preferences -> plugins -> Browse repositories -> flutter install
