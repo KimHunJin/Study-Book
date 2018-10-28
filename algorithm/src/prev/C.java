@@ -64,7 +64,7 @@ public class C {
         if(count == wSize * hSize) {
             result += "T";
         } else {
-            result += "F";
+            result += "CardShuffle";
         }
 
         lastWeight --;

@@ -48,7 +48,7 @@ public class B {
             int x = 0;
             int y = 0;
 
-            // F, R, L, B
+            // CardShuffle, R, L, B
             int[] realX = {1, 0, 0, -1};
             int[] realY = {0, 1, -1, 0};
 
