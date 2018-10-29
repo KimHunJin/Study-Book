@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
+import 'Chat.dart';
 
 class SecondPage extends StatefulWidget {
 
@@ -66,6 +67,22 @@ class _SecondPageState extends State<SecondPage> {
       ),
     );
 
+    final ChatButton = Padding(
+      padding: EdgeInsets.symmetric(vertical: 16.0),
+      child: Material(
+        borderRadius: BorderRadius.circular(30.0),
+        shadowColor: Colors.lightGreenAccent.shade100,
+        elevation: 5.0,
+        child: MaterialButton(
+            minWidth: 200.0,
+            height: 42.0,
+            color: Colors.lightGreenAccent,
+            child: Text("Chat", style: TextStyle(color: Colors.white)),
+            onPressed: () => Navigator.of(context).pushNamed(Chat.tag),
+        ),
+      ),
+    );
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
@@ -80,6 +97,8 @@ class _SecondPageState extends State<SecondPage> {
             password,
             SizedBox(height: 24.0),
             nextButton,
+            SizedBox(height: 8.0,),
+            ChatButton,
           ],
         ),
       ),

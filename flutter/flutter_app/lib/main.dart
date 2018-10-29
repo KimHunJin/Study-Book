@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'SecondPage.dart';
+import 'Chat.dart';
 
 void main() => runApp(new MyApp());
 
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   final routes = <String,WidgetBuilder> {
     SecondPage.tag: (context) => SecondPage(),
     MyHomePage.tag: (context) => MyHomePage(title: 'home',),
+    Chat.tag: (context) => Chat(),
   };
 
   @override
