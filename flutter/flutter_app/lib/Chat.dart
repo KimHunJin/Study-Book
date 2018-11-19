@@ -52,11 +52,12 @@ class ChatState extends State<Chat> with TickerProviderStateMixin {
             ),
           ],
         ),
-        decoration: Theme.of(context).platform == TargetPlatform.iOS ? new BoxDecoration(
-          border: new Border (
-            top: new BorderSide(color: Colors.grey[200])
-          ),
-        ) : null,
+        decoration: Theme.of(context).platform == TargetPlatform.iOS
+            ? new BoxDecoration(
+                border:
+                    new Border(top: new BorderSide(color: Colors.grey[200])),
+              )
+            : null,
       ),
     );
   }
