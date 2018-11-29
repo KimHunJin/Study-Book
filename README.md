@@ -10,4 +10,4 @@
 7. [node.js](https://github.com/KimHunJin/Study-Book/tree/master/node/bus_info) : 진행중인 node.js 개인 프로젝트
 8. [Seminal](https://github.com/KimHunJin/Study-Book/tree/master/seminar) : 세미나 참석 내용
 9. [Vue.js](https://github.com/KimHunJin/Study-Book/tree/master/vue) : vue.js 
-10. [React.js](https://github.com/KimHunJin/Study-Book/tree/master/react) : 
+10. [React.js](https://github.com/KimHunJin/Study-Book/tree/master/react) : 리액트공부
