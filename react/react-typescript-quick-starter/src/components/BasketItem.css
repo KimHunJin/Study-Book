@@ -1,0 +1,30 @@
+.BasketItem {
+    display: flex;
+    width: 100%;
+}
+
+.BasketItem .name {
+    flex: 2;
+}
+
+.BasketItem .price {
+    flex: 1;
+}
+
+.BasketItem .count {
+    flex: 1;
+}
+
+.BasketItem .return {
+    margin-left: auto;
+    color: #f06595;
+    cursor: pointer;
+}
+
+.BasketItem .return:hover {
+    text-decoration: underline;
+}
+
+.BasketItem+.BasketItem {
+    margin-top: 1rem;
+}

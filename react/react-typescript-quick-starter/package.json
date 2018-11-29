@@ -1,0 +1,43 @@
+{
+  "name": "untitled",
+  "version": "0.1.0",
+  "private": true,
+  "main": "webpack.config.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "mobx": "^5.6.0",
+    "mobx-react": "^5.4.2",
+    "mobx-utils": "^5.1.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts-ts": "3.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "dev": "webpack-dev-server",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.10",
+    "@types/react": "^16.7.8",
+    "@types/react-dom": "^16.0.11",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mobx-react-devtools": "^6.0.3",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^5.3.1",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.1.6",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}

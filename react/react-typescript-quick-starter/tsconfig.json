@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "experimentalDecorators" : true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-    "outDir": "build/dist",
+    "outDir": "./build/",
     "module": "esnext",
     "target": "es5",
     "lib": ["es6", "dom"],
@@ -9,7 +11,6 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -19,6 +20,9 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true
   },
+  "include": [
+    "./src/**/*"
+  ],
   "exclude": [
     "node_modules",
     "build",
