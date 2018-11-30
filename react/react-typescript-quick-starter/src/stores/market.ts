@@ -1,19 +1,22 @@
 import { observable, action, computed} from "mobx";
+import RootStore from "./index";
+import {SelectedItem} from "./SelectedItem";
 
 export default class MarketStore {
-    @observable selectedItems = [] as any
 
-    root : any
+    @observable selectedItems : SelectedItem[] = []
 
-    constructor(root : any) {
+    root : RootStore
+
+    constructor(root : RootStore) {
         this.root = root
     }
 
     @action
-    put = (name : any, price : any) => {
-        const { number } = this.root.counter
+    put : any = (name : string, price : number) : any => {
+        const {number} = this.root.counter
 
-        const exists = this.selectedItems.find((item: any) => item.name === name)
+        const exists = this.selectedItems.find((item: SelectedItem) => item.name === name)
         if(!exists) {
             this.selectedItems.push({
                 name,
@@ -26,16 +29,16 @@ export default class MarketStore {
     }
 
     @action
-    take = (name: any) => {
-        const itemToTake = this.selectedItems.find((item: any) => item.name === name)
+    take = (name: string) : void => {
+        const itemToTake = this.selectedItems.find((item: SelectedItem) => item.name === name) as SelectedItem
         itemToTake.count--
         if(itemToTake.count === 0) {
-            this.selectedItems.remove(itemToTake)
+            this.selectedItems.splice(this.selectedItems.indexOf(itemToTake), 1)
         }
     }
 
     @computed
-    get total() {
+    get total() : number {
         console.log('총합 계산...')
         return this.selectedItems.reduce((previous: any, current: any) => {
             return previous + current.price * current.count

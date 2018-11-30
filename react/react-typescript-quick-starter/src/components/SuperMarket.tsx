@@ -1,8 +1,8 @@
 import * as React from 'react'
-import SupermarketTemplate from './SupermarketTemplate'
-import ShopItemList from './ShopItemList'
-import BasketItemList from './BasketItemList'
-import TotalPrice from './TotalPrice'
+import SupermarketTemplate from './supermarket/SupermarketTemplate'
+import ShopItemList from './shop/ShopItemList'
+import BasketItemList from './basket/BasketItemList'
+import TotalPrice from './utils/TotalPrice'
 
 const SuperMarket : any = () => {
     return (

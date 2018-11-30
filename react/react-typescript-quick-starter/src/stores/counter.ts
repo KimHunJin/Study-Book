@@ -1,11 +1,12 @@
 import {action, observable} from "mobx";
+import RootStore from "./index";
 
 export default class CounterStore {
-    @observable public number = 1 as any
-    root: any
+    @observable public number : number = 1
+    root: RootStore
 
-    constructor(root : any) {
-        this.root = root as any
+    constructor(root : RootStore) {
+        this.root = root
     }
 
     @action

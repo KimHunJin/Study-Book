@@ -25,9 +25,9 @@ const ShopItemList = ({ onPut } : {onPut: any}) => {
     const itemList = items.map(item => (
         <ShopItem {...item} key={item.name} onPut={onPut} />
     ))
-    return <div>{itemList}</div> as any
+    return <div>{itemList}</div>
 }
 
 export default inject(({market}) => ({
-    onPut: market.put,
-}))(observer(ShopItemList))
+    onPut: market.put as any,
+}))(observer(ShopItemList)) as any

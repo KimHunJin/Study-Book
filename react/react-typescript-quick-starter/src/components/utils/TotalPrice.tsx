@@ -5,11 +5,10 @@ import React, {Component} from 'react'
 @observer
 class TotalPrice extends Component {
     public render() {
-        // @ts-ignore
-        const { total } = this.props
+        const {total}: any = this.props
         return (
             <div>
-                <hr />
+                <hr/>
                 <p>
                     <b>총합: </b> {total}원
                 </p>

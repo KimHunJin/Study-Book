@@ -6,7 +6,7 @@ import {Provider} from "mobx-react";
 import registerServiceWorker from './registerServiceWorker';
 import RootStore from "./stores";
 
-const root = new RootStore()
+const root : RootStore = new RootStore()
 
 ReactDOM.render(
     <Provider {...root}>

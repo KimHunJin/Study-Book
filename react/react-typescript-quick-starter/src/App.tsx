@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 // import logo from './logo.svg'
-import Counter from "./components/Counter";
+import Counter from "./components/utils/Counter";
 import DevTools from "mobx-react-devtools";
 import SuperMarket from "./components/SuperMarket";
 
