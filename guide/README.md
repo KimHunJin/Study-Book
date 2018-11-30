@@ -97,17 +97,22 @@
     2. 폴더로 이동
     3. 명령어 입력 (git clone "복사한 URL")
         ![이미지](./images/clone.PNG)
+        
     4. 폴더 이동 (폴더가 하나 생겼을 거다.)
         ![이미지](./images/make.PNG)
+
     5. 텍스트 파일 생성
         ![이미지](./images/make2.PNG)
+
     6. 명령어 입력 (git add *)
     7. 명령어 입력 (git commit -m "메시지")
         ![이미지](./images/commit.PNG)
+
     8. 명령어 입력 git config --global user.name "깃허브 가입할 때 사용한 이름"
     9. 명령어 입력 git config --global user.email "깃허브 가입할 때 사용한 이메일"
     10. 명령어 입력 git push
         ![이미지](./images/push.PNG)
+
     11. 확인
         ![이미지](./images/push2.PNG)
         
