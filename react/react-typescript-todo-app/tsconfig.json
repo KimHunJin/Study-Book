@@ -7,8 +7,11 @@
     "target": "es5",
     "lib": ["es6", "dom"],
     "sourceMap": true,
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "./src/**/*"
