@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "lib": ["dom", "es2015", "es2016"],
+        "moduleResolution": "node",
+        "jsx": "preserve",
+        "experimentalDecorators": true,
+        "allowJs": true,
+        "skipLibCheck": false,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true
+    },
+    "include": [
+        "src"
+    ]
+  }
