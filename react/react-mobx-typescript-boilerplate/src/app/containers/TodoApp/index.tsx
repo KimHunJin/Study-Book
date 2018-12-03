@@ -7,6 +7,8 @@ import {TodoList} from 'app/components/TodoList';
 import {Footer} from 'app/components/Footer';
 import {RouterStore, TodoStore} from 'app/stores';
 import {STORE_ROUTER, STORE_TODO, TODO_FILTER_LOCATION_HASH, TodoFilter} from 'app/constants';
+import {Title} from "app/components/Title";
+import {TabMenu} from "app/components/Tab";
 
 export interface TodoAppProps extends RouteComponentProps<any> {
   /** MobX Stores will be injected via @inject() **/
@@ -83,7 +85,8 @@ export class TodoApp extends React.Component<TodoAppProps, TodoAppState> {
 
     return (
       <div className={style.normal}>
-
+          <Title/>
+          {TabMenu('todo')}
         <Header addTodo={todoStore.addTodo} />
         <TodoList
           todos={filteredTodos}
