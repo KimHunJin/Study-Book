@@ -8,8 +8,6 @@
       <change afterPath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/components/Title/style.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/containers/DiaryApp/index.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/models/DiaryModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/components/Header/index.tsx" afterDir="false" />
@@ -19,16 +17,6 @@
       <change beforePath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/containers/TodoApp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/containers/TodoApp/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-mobx-typescript-boilerplate/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-typescript-bird/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-typescript-bird/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-typescript-bird/src/app.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-typescript-bird/src/components/add/todo.add.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-typescript-bird/src/components/list/todo.list.item.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-typescript-bird/src/components/list/todo.list.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-typescript-bird/src/store/todo.store.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-typescript-bird/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-typescript-bird/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-typescript-bird/webpack.config.ts" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,15 +39,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/assets/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -71,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/tsconfig.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="136">
+              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -83,8 +62,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/containers/Root/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state relative-caret-position="136">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/containers/DiaryApp/index.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -96,7 +87,10 @@
         <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/components/Tab/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+              <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -295,6 +289,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="DiaryApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="react-mobx-typescript-boilerplate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
               <item name="Root" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -331,7 +334,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543815995714" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543816020745" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -395,18 +398,17 @@
       <workItem from="1543384893412" duration="18692000" />
       <workItem from="1543448271305" duration="28613000" />
       <workItem from="1543533596588" duration="25077000" />
-      <workItem from="1543794381800" duration="19460000" />
+      <workItem from="1543794381800" duration="19728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133473000" />
+    <option name="totallyTimeSpent" value="133741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16471216" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16471216" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -425,7 +427,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -671,16 +673,6 @@
     <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/constants/index.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/containers/DiaryApp/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/components/Tab/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -792,27 +784,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/components/Tab/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/containers/Root/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        <state relative-caret-position="136">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/components/Tab/index.tsx">
+    <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/src/app/containers/DiaryApp/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-mobx-typescript-boilerplate/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="204">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
