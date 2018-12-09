@@ -41,7 +41,9 @@
 자 설치를 시작하자.
 
 * 윈도우
+ 
     ![이미지](./images/install-window.PNG)
+
     1. 클릭 <br/>
     2. 아싸리 Next 누르기 <br/>
     3. 설치 완료
@@ -77,15 +79,19 @@
 깃허브 게정을 만들었으면, 저장소를 만든다.
 
 1. 이런 창이나
+
 ![이미지](./images/repo1.PNG)
 
 2. 이런 창이 보이면 NEW 클릭
+
 ![이미지](./images/repo2.PNG)
 
 3. 이름을 입력하고 생성
+
 ![이미지](./images/repo3.PNG)
     
 4. 이런 창이 나오고, 보이는 경로 복사
+
 ![이미지](./images/repo4.PNG)
 
 ### 깃허브 사용 해보기 (bash)
@@ -97,9 +103,11 @@ git bash 실행
 1. 폴더 생성 (바탕화면에 만들었다.)
 2. 폴더로 이동
 3. 명령어 입력 (git clone "복사한 URL")
+
     ![이미지](./images/clone.PNG)
         
 4. 폴더 이동 (폴더가 하나 생겼을 거다.)
+
     ![이미지](./images/make.PNG)
 
 5. 텍스트 파일 생성
@@ -107,14 +115,17 @@ git bash 실행
 
 6. 명령어 입력 (git add *)
 7. 명령어 입력 (git commit -m "메시지")
+
     ![이미지](./images/commit.PNG)
 
 8. 명령어 입력 git config --global user.name "깃허브 가입할 때 사용한 이름"
 9. 명령어 입력 git config --global user.email "깃허브 가입할 때 사용한 이메일"
 10. 명령어 입력 git push
+
     ![이미지](./images/push.PNG)
 
 11. 확인
+
     ![이미지](./images/push2.PNG)
         
 
