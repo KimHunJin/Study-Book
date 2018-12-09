@@ -13,10 +13,10 @@ export default class MarketStore {
     }
 
     @action
-    put : any = (name : string, price : number) : any => {
+    put: Function = (name : string, price : number) : void => {
         const {number} = this.root.counter
 
-        const exists = this.selectedItems.find((item: SelectedItem) => item.name === name)
+        const exists : any = this.selectedItems.find((item: SelectedItem) => item.name === name)
         if(!exists) {
             this.selectedItems.push({
                 name,
@@ -30,7 +30,7 @@ export default class MarketStore {
 
     @action
     take = (name: string) : void => {
-        const itemToTake = this.selectedItems.find((item: SelectedItem) => item.name === name) as SelectedItem
+        const itemToTake: any = this.selectedItems.find((item: SelectedItem) => item.name === name) as SelectedItem
         itemToTake.count--
         if(itemToTake.count === 0) {
             this.selectedItems.splice(this.selectedItems.indexOf(itemToTake), 1)
