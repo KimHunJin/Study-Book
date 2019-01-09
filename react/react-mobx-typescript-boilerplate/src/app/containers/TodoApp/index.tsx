@@ -56,6 +56,7 @@ export class TodoApp extends React.Component<TodoAppProps, TodoAppState> {
 
     getFilteredTodo(filter: TodoFilter) {
         const todoStore = this.props[STORE_TODO] as TodoStore;
+        console.log(todoStore)
         switch (filter) {
             case TodoFilter.ACTIVE:
                 return todoStore.activeTodos;
