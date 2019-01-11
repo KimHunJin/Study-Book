@@ -18,7 +18,23 @@ public class BJ_2159 {
             xy[i].y = Integer.parseInt(t[1]);
         }
 
+        int dis = 0;
 
+        int[] dx = {0, 0, 1, -1};
+        int[] dy = {1, -1, 0, 0};
+
+        XY[] fs = new XY[2];
+
+        for (int i = 0; i < n; i++) {
+            int lx = xy[i].x;
+            int ly = xy[i].y;
+
+            for (int j = 0; j < 4; j++) {
+                int cx = lx + dx[j];
+                int cy = ly + dy[j];
+
+            }
+        }
     }
 
     static class XY {
