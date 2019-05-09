@@ -50,7 +50,7 @@ DNS가 저장/관리하는 계층적 구조
 4. ARP를 활용해 수신측 MAC 주소 획득
 	* OSI 7 Layer 중 3계층
 		
-		![OSI 7 Layer](./image/OSI_7_layer.png)
+		![OSI 7 Layer](./image/osi_7_layer.png)
 		
 		![OSI 7 Layer 정보](./image/OSI_7_layer_info.png)
     
