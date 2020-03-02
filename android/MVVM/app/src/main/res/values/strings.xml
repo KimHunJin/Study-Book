@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">MVVM</string>
-
-    <string name="retry">Retry</string>
-    <string name="post_error">An error occurred while loading the posts</string>
-</resources>

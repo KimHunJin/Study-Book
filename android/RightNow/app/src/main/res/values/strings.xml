@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">RightNow</string>
-
-    <string name="route_bus_wait_time">버스 대기시간</string>
-    <string name="route_percentage">확률</string>
-</resources>
