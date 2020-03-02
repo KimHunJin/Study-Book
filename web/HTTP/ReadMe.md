@@ -14,7 +14,7 @@
 2. 네임 서버 (Name Server)
 3. 리졸버 (Resolver)
 
-![도메인 개요](./image/DNS_concept.png)
+![도메인 개요](image/DNS_concept.png)
 
 ### 네임 서버 (Name Server)
 ```
@@ -31,7 +31,7 @@ DNS 클라이언트의 요청을 네임 서버로 전달하고
 ```
 DNS가 저장/관리하는 계층적 구조
 ```
-![도메인 네임 스페이스](./image/DNS_structure_1.png)
+![도메인 네임 스페이스](image/DNS_structure_1.png)
 
 
 ## Client To Server Connection
@@ -39,9 +39,9 @@ DNS가 저장/관리하는 계층적 구조
 2. URL로 IP 획득
 	* Local DNS 서버
 		
-		![로컬 DNS](./image/local_DNS2.png)
+		![로컬 DNS](image/local_DNS2.png)
 		
-		![로컬 DNS](./image/local_DNS.png)
+		![로컬 DNS](image/local_DNS.png)
 	* Root DNS 서버
 	* 1차 DNS 서버 (Top Level DNS)
 	* 2차 DNS 서버 (Authorative DNS)
@@ -50,8 +50,8 @@ DNS가 저장/관리하는 계층적 구조
 4. ARP를 활용해 수신측 MAC 주소 획득
 	* OSI 7 Layer 중 3계층
 		
-		![OSI 7 Layer](./image/osi_7_layer.png)
+		![OSI 7 Layer](image/osi_7_layer.png)
 		
-		![OSI 7 Layer 정보](./image/OSI_7_layer_info.png)
+		![OSI 7 Layer 정보](image/OSI_7_layer_info.png)
     
    
