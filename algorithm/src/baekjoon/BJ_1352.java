@@ -30,7 +30,7 @@ public class BJ_1352 {
         }
 
 
-        String[] words = {"", "A", "B", "C", "D", "E", "F", "G", "H", "I"};
+        String[] words = {"", "A", "B", "LineD", "D", "E", "F", "G", "H", "I"};
 
         int[] wordsCount = new int[findNum + 1];
 
