@@ -1,4 +1,5 @@
 # Webpack
+참고 : https://webpack.js.org/concepts/#entry
 
 ### # Webpack이란?
 - modern javascript를 위한 정적 모듈 번들러
