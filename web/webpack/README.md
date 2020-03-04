@@ -1,5 +1,6 @@
 # Webpack
-참고 : https://webpack.js.org/concepts/#entry
+참고 : https://webpack.js.org/concepts/#entry <br/>
+documents를 보면서, 이해한 내용을 작성한 문서입니다.
 
 ### # Webpack이란?
 - modern javascript를 위한 정적 모듈 번들러
@@ -52,6 +53,106 @@ code splitting은 webpack의 가장 강력한 기능 중 하나다.<br/>
   * Entry Points: 엔트리 설정을 통해 코드를 수동으로 분리한다.
   * 중복 방지 : SplitChunksPlugin을 사용해 dedupe와 정크 파일을 분리할 수 있다.
   * Dynamic Import : module 내에서 inline 함수를 호출 해 코드를 분할한다.
+
+### # Entry Points
+code splitting 중에 가장 쉽고 직관적인 방법이다.
+
+```
+const path = require('path');
+
+module.exports = {
+  mode: 'development',
+  entry: {
+    index: './src/index.js',
+    another: './src/another-module.js',
+  },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+};
+```
+
+entry안에 기존에 있던 index 외에 another 라는 entry point를 추가한다.<br/>
+빌드 시 각기 다른 번들이 생성된다.
+
+Asset |     Size |  Chunks   |   Chunk Names 
+----|----|----|----
+another.bundle.js |  550 KiB  | another  [emitted]  | another
+  index.bundle.js | 550 KiB   | index   [emitted]  | index
+  
+```
+Entrypoint index = index.bundle.js
+Entrypoint another = another.bundle.js
+``` 
+
+*단, 유의해야 할 사항이 있다.*
+
+* 정크 간 중복된 모듈이 있으면, 두 모듈에 모두 포함된다.
+* 코드를 통해 동적 분할할 수 없다.
+
+> SplitChunksPlugin 을 사용하여 첫번째 문제인 정크 간 중복 모듈 문제를 해결할 수 있다.
+> SplitChunksPlugin을 사용하면 정크 간 중복 모듈을 분 제거하여 메인 bunlde의 무게를 줄일 수 있다.
+
+### # Prevent Duplication
+
+- 엔트리에 depend on 옵션을 통해 정크 간 모듈을 공유할 수 있다.
+
+```
+const path = require('path');
+
+module.exports = {
+    mode: 'development',
+    entry: {
+        index: { import: './src/index.js', dependOn: 'shared' },
+        another: { import: './src/another-module.js', dependOn: 'shared' },
+        shared: 'lodash',
+    },
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+    },
+};
+```
+
+### # Dynamic Import
+
+webpack 설정보다 코드 시점에서 dynamic import를 사용하여 코드를 분할한다. <br/>
+단, dynamic import()는 es6의 문법 중 Promise를 내부에서 사용하기 때문에, 오래된 브라우저에서는 polyfill을 해주어야 한다.
+
+```
+function getComponent() {
+    return import(/* webpackChunkName: "lodash" */ 'lodash').then(({ default: _ }) => {
+        const element = document.createElement('div');
+        element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+        return element;
+    }).catch(
+        error => 'An error occurred while loading the component'
+    );
+}
+```
+
+> 코드 두번째 줄에 default가 있다. default가 필요한 이유는, webpack4부터 CommonJS 모듈을 가져올 때
+> module.export로 가져오지 않고, namespace object로 작성하기 때문이다.
+
+
+:white_check_mark: TODO 좀 더 알아볼 것
+
+### Prefetching / Preloading modules
+webpack 4.6+ 부터 지원한다.
+
+- prefetch : 향후 일부 탐색에 resource가 필요할 수 있다.
+- preload : 현재 탐색 중에 resource가 필요할 수 있다.
+
+prefetch 예제
+```
+import(/* webpackPrefetch: true */ 'LoginModal');
+```
+
+preload 예제
+```
+import(/* webpackPreload: true */ 'ChartingLibrary');
+```
 
 
 ### # Loader
