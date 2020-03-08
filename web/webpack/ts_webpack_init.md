@@ -4,6 +4,7 @@
 2. npm init -y // npm 세팅
 3. npm install
 4. npm install --save-dev webpack webpack-cli // webpack 설치
+    (주의, webpack을 설치하지 않으면, npx 실행 시점에서 오류 발생)
 5. npm install --save-dev typescript ts-loader // typescript, ts-loader 설치
 6. tsconfig.json 생성
 ```
