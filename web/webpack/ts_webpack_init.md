@@ -2,10 +2,11 @@
 
 1. create directory // 폴더 생성
 2. npm init -y // npm 세팅
-3. npm install --save-dev webpack-cli // webpack cli 설치
-4. npm install --save-dev typescript ts-loader // typescript, ts-loader 설치
-5. tsconfig.json 생성
-  ```
+3. npm install
+4. npm install --save-dev webpack webpack-cli // webpack 설치
+5. npm install --save-dev typescript ts-loader // typescript, ts-loader 설치
+6. tsconfig.json 생성
+```
   {
   "compilerOptions": {
     "outDir": "./dist/", // 결과를 저장할 경로
@@ -19,5 +20,34 @@
     "sourceMap": true // 소스맵 (*.map) 파일 생성 여부
   }
 }
-  ```
-6. 실행.. TODO
+```
+7. webpack.config.js 파일 생성
+```
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.ts',
+  devtool: 'inline-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js' ],
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+};
+
+```
+8. 실행
+```
+npx webpack --config ./webpack.config.js
+```
