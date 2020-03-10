@@ -55,6 +55,8 @@ module.exports = {
 
 10. 초기 세팅 (/src/index.ts)
 ```
+import * as _ from "lodash";
+
 function component() {
   const element = document.createElement('div');
 
