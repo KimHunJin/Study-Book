@@ -1,4 +1,4 @@
-# TypeScript와 Webpack으로 React를 초기 세팅 해보자
+# TypeScript와 Webpack을 초기 설정 해보자
 
 1. create directory // 폴더 생성
 2. npm init -y // npm 세팅
