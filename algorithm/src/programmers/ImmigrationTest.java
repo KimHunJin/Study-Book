@@ -1,4 +1,6 @@
-class Solution {
+package programmers;
+
+class ImmigrationTest {
     public long solution(int n, int[] times) {
         long answer = Long.MAX_VALUE;
 
