@@ -2,9 +2,16 @@ package programmers;
 
 public class SchoolRoad {
     public static void main(String[] args) {
-        int m = 100;
-        int n = 100;
+        int m = 10;
+        int n = 20;
         int[][] puddles = {
+                {1, 6},
+                {2, 2},
+                {2, 5},
+                {3, 8},
+                {5, 6},
+                {9, 9},
+                {10, 9},
         };
         System.out.println(new SchoolRoad().solution(m, n, puddles));
     }
@@ -14,13 +21,13 @@ public class SchoolRoad {
 
         int mod = 1000000007;
 
-        int[] map = new int[m * n];
+        long[] map = new long[m * n];
         map[0] = 1;
 
         for (int i = 0; i < puddles.length; i++) {
             int[] puddle = puddles[i];
-            int puddleM = puddle[0] - 1;
-            int puddleN = puddle[1] - 1;
+            int puddleM = puddle[1] - 1;
+            int puddleN = puddle[0] - 1;
 
             int puddlePosition = puddleM * m + puddleN;
             map[puddlePosition] = -1;
@@ -36,8 +43,8 @@ public class SchoolRoad {
             int currentLeft = i - 1;
             int currentTop = i - m;
 
-            int left = 0;
-            int top = 0;
+            long left = 0;
+            long top = 0;
 
             if (i % m != 0) {
                 left = map[currentLeft];
@@ -47,22 +54,11 @@ public class SchoolRoad {
                 top = map[currentTop];
             }
 
-            map[i] = (left % mod) + (top % mod);
+            map[i] = left + top;
             map[i] = map[i] % mod;
         }
 
-        for (int i = 0; i < map.length; i++) {
-//            System.out.print(map[i] + " ");
-            if (i % m == m-1) {
-//                System.out.println();
-            }
-
-            if (map[i] > 1000000000) {
-                System.out.println(i + " : " + map[i]);
-            }
-        }
-
-        answer = map[map.length - 1];
+        answer = (int) (map[map.length - 1] % mod);
 
         return answer;
     }
