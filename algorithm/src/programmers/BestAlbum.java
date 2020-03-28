@@ -35,8 +35,6 @@ public class BestAlbum {
             }
         }
 
-        int size = countMap.keySet().size();
-
         List<Integer> result = new ArrayList<>();
 
         for (String genreName : countMap.keySet()) {
@@ -55,13 +53,13 @@ public class BestAlbum {
         for (int i = 0, j=0; i < arr.length; i++, j+=2) {
             String genre = reverseMap.get(arr[i]);
             List<Song> list = songMap.get(genre);
-            Collections.sort(list, (o1, o2) -> {
+            list.sort((o1, o2) -> {
                 if (o1.count > o2.count) {
                     return -1;
                 } else if (o1.count < o2.count) {
                     return 1;
                 } else {
-                    return Integer.compare(o2.index, o1.index);
+                    return Integer.compare(o1.index, o2.index);
                 }
             });
 
