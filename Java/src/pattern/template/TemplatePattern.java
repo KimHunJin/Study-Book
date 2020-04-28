@@ -1,4 +1,4 @@
-package pattern;
+package pattern.template;
 
 public class TemplatePattern {
 

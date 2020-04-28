@@ -1,4 +1,4 @@
-package pattern;
+package pattern.factory;
 
 import java.sql.Connection;
 
