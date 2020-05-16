@@ -29,6 +29,7 @@ ex)
 ## 참고
 - [카카오 테크](https://tech.kakao.com/2019/08/01/graphql-basic/)
 - https://www.holaxprogramming.com/2018/01/20/graphql-vs-restful-api/
+- https://medium.com/@FourwingsY/graphql%EC%9D%84-%EC%98%A4%ED%95%B4%ED%95%98%EB%8B%A4-3216f404134
 
 
 ## 코드
