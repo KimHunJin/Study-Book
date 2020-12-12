@@ -1,3 +1,5 @@
+package programmers;
+
 class LongestPalindrome {
     public static void main(String[] args) {
         new LongestPalindrome().solve();
