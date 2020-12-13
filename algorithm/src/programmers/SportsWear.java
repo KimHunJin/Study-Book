@@ -2,6 +2,11 @@ package programmers;
 
 import java.util.Arrays;
 
+/**
+ * https://programmers.co.kr/learn/courses/30/lessons/42862
+ * <p>
+ * 프로그래머스 체육복
+ */
 class SportsWear {
     public static void main(String[] args) {
         new SportsWear().solve();
@@ -53,7 +58,7 @@ class SportsWear {
         }
 
         // 한 개 이상 들고 있는 학생만 카운팅
-        for (int value: studyAbleStudent) {
+        for (int value : studyAbleStudent) {
             if (value >= 1) {
                 answer++;
             }

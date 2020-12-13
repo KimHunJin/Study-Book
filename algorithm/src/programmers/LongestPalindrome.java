@@ -1,5 +1,10 @@
 package programmers;
 
+/**
+ * https://programmers.co.kr/learn/courses/30/lessons/12904
+ *
+ * 프로그래머스 가장 긴 팰린드롬
+ */
 class LongestPalindrome {
     public static void main(String[] args) {
         new LongestPalindrome().solve();

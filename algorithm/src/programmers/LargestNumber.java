@@ -1,8 +1,12 @@
 package programmers;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
+/**
+ * https://programmers.co.kr/learn/courses/30/lessons/42883
+ *
+ * 프로그래머스 큰 수 만들기
+ */
 public class LargestNumber {
     public static void main(String[] args) {
         int[] numbers = {0, 100, 10};
