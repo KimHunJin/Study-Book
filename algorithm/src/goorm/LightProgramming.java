@@ -1,6 +1,9 @@
 package goorm;
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class LightProgramming {
 
@@ -24,23 +27,50 @@ public class LightProgramming {
 
         int n = Integer.parseInt(br.readLine(), 10);
 
+        Map<Integer, Integer> lampMap = new HashMap<>();
+
         for (int i = 0; i < n; i++) {
             String[] temp = br.readLine().split(" ");
             int type = Integer.parseInt(temp[0]);
             int index = Integer.parseInt(temp[1], 10) - 1;
             if (type == HORIZONTAL) {
+                // 가로는 index * 100 + 1 * n
                 for (int k = 0; k < col; k++) {
-                    lamps[index][k] = lamps[index][k] == 0 ? 1 : 0;
+                    int indexNumber = (index * 100) + k;
+                    if (lampMap.containsKey(indexNumber)) {
+                        lampMap.put(indexNumber, lampMap.get(indexNumber) + 1);
+                    } else {
+                        lampMap.put(indexNumber, 1);
+                    }
+//                    lamps[index][k] = lamps[index][k] == 0 ? 1 : 0;
                 }
             } else {
+                // 세로는 index + 100 * n
                 for (int k = 0; k < row; k++) {
-                    lamps[k][index] = lamps[k][index] == 0 ? 1 : 0;
+                    int indexNumber = (k * 100) + index;
+                    if (lampMap.containsKey(indexNumber)) {
+                        lampMap.put(indexNumber, lampMap.get(indexNumber) + 1);
+                    } else {
+                        lampMap.put(indexNumber, 1);
+                    }
                 }
             }
         }
 
-        for (int[] lamp: lamps) {
-            for (int light: lamp) {
+        Set<Integer> s = lampMap.keySet();
+        for (int key : s) {
+            int calRow = key / 100;
+            int calCol = key % 100;
+            int count = lampMap.get(key);
+
+            if (count % 2 == 1) {
+                lamps[calRow][calCol] = lamps[calRow][calRow] == 0 ? 1 : 0;
+            }
+        }
+
+
+        for (int[] lamp : lamps) {
+            for (int light : lamp) {
                 System.out.print(light + " ");
             }
             System.out.println();
