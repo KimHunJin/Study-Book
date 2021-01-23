@@ -1,10 +1,10 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
- * 메모리 초과 ㅠㅠ
+ * 시간 초과 ㅠㅠ
  */
 public class MinimumOperationsToReduceXToZero {
 
@@ -16,11 +16,11 @@ public class MinimumOperationsToReduceXToZero {
         int lastindex = nums.length - 1;
         int index = 0;
 
-        List<Info> infoQueue = new ArrayList<>();
+        Queue<Info> infoQueue = new LinkedList<>();
         infoQueue.add(new Info(1, x - nums[0], 1, lastindex));
         infoQueue.add(new Info(1, x - nums[lastindex], 0, lastindex - 1));
-        while (index != infoQueue.size()) {
-            Info info = infoQueue.get(index);
+        while (!infoQueue.isEmpty()) {
+            Info info = infoQueue.poll();
             index++;
 
             if (info.remainder == 0) {
