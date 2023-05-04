@@ -1,3 +1,10 @@
 .idea/
 .DS_Store
 ./etc/image/.DS_Store
+
+./monorepo/day1/yarn-berry-workspace/.yarn
+./,onorepo/day1/yarn-berry-workspace/.vscode
+
+./monorepo/day2/yarn-berry-workspace/.yarn
+./monorepo/day2/yarn-berry-wrokspace/.vscode
+

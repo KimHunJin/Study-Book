@@ -1,0 +1,20 @@
+{
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "eslint.nodePath": ".yarn/sdks",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+
+  // 기본 포맷터 prettier로 사용
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 파일 저장시 formatter 실행
+  "editor.formatOnSave": true,
+  "editor.rulers": [120],
+
+  // 추가되는 내용
+  "eslint.packageManager": "yarn",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
+}

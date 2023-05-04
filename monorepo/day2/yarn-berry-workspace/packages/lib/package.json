@@ -1,0 +1,12 @@
+{
+  "name": "@my-app/lib",
+  "packageManager": "yarn@3.5.1",
+  "main": "./src/index.ts",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --project ./tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
